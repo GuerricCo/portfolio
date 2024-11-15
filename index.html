@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project_rotate.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#about" id="link-about">À propos</a>
+        <a href="#formation" id="link-formation">Formation</a>
+        <a href="#project" id="link-project">Projet</a>
+        <a href="#contact" id="link-contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="section section1" id="about">
+        <div class="container">
+            <div id="profil" class="animation-show">
+                <img src="img/chemise-homme-promo-banner_o0eofgwmrj.jpg" alt="photo Guerric Cochelin">
+                <h1>Guerric COCHELIN</h1>
+            </div>
+            <div id="about" class="animation-show">
+                <h2>Etudiant & Apprenti:</h2>
+                <h3>Développeur web</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore reprehenderit quaerat, repellat at eveniet dolore!</p>
+                <button class="cv-button" onclick="window.location.href='chemin/vers/ton_cv.pdf'">Voir mon CV</button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section2" id="formation">
+        <div id="name" class="animation-show">
+            <img src="img/chemise-homme-promo-banner_o0eofgwmrj.jpg" alt="photo Guerric Cochelin">
+            <h1>Guerric COCHELIN</h1>
+        </div>
+        <div id="about" class="animation-show">
+            <h2>Etudiant & Apprenti:</h2>
+            <h3>Développeur web</h3>
+        </div>
+    </section>
+
+    <section class="section section3" id="project">
+        <div class="banner">
+            <div class="slider" style="--quantity: 10">
+                <!-- Chaque item a sa propre info-box et stoppe la rotation à son survol -->
+                <div class="item" style="--position: 1">
+                    <img src="img/banner1.jpg" alt="banner1">
+                    <div class="info-box">
+                        <h3>Nom du Projet 1</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : HTML, CSS</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 2">
+                    <img src="img/banner2.jpg" alt="banner2">
+                    <div class="info-box">
+                        <h3>Nom du Projet 2</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : JavaScript, React</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 3">
+                    <img src="img/banner3.jpg" alt="banner3">
+                    <div class="info-box">
+                        <h3>Nom du Projet 3</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : Node.js, Express</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 4">
+                    <img src="img/banner4.jpg" alt="banner4">
+                    <div class="info-box">
+                        <h3>Nom du Projet 4</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : MongoDB, React</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 5">
+                    <img src="img/banner5.jpg" alt="banner5">
+                    <div class="info-box">
+                        <h3>Nom du Projet 5</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : Vue.js, Firebase</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 6">
+                    <img src="img/banner6.avif" alt="banner6">
+                    <div class="info-box">
+                        <h3>Nom du Projet 6</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : SASS, Bootstrap</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 7">
+                    <img src="img/banner7.jpg" alt="banner7">
+                    <div class="info-box">
+                        <h3>Nom du Projet 7</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : Vue.js, Firebase</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 8">
+                    <img src="img/banner8.jpg" alt="banner8">
+                    <div class="info-box">
+                        <h3>Nom du Projet 8</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : Vue.js, Firebase</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 9">
+                    <img src="img/banner9.avif" alt="banner5">
+                    <div class="info-box">
+                        <h3>Nom du Projet 9</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : Vue.js, Firebase</p>
+                    </div>
+                </div>
+                <div class="item" style="--position: 10">
+                    <img src="img/banner10.avif" alt="banner10">
+                    <div class="info-box">
+                        <h3>Nom du Projet 10</h3>
+                        <p>Date : 2024</p>
+                        <p>Outils utilisés : Vue.js, Firebase</p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres items selon besoin -->
+            </div>
+        </div>
+    </section>
+    <section class="section section4" id="Contact">
+        <div class="form-container">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form" novalidate>
+                <input type="hidden" name="contact_number" value="697483">
+    
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" name="name" required>
+                    <div class="error-message">Veuillez entrer votre nom</div>
+                </div>
+    
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                    <div class="error-message">Veuillez entrer une adresse email valide</div>
+                </div>
+    
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" required></textarea>
+                    <div class="error-message">Veuillez entrer votre message</div>
+                </div>
+    
+                <input type="submit" value="Envoyer">
+                <div id="status"></div>
+            </form>
+        </div>
+        <div class="line"></div>
+        <div class="footer">
+            <h3>Me Contacter:</h3>
+            <div class="grandcontact">
+            <div class="minicontact">
+            <a><img src="img/github.png"><p>Mon Github</p></a>
+            <a><img src="img/logo-linkedin.png"><p>Mon LinkedIn</p></a>
+        </div>
+        <div class="minicontact">
+            <a><img src="img/discorde.png"><p>Mon Discord</p></a>
+            <a href="mailto: cochelin.guerric@hotmail.com" target="_blank"><img src="img/enveloppe.png"><p>Envoyez un Mail</p></a>
+        </div>
+    </div>
+
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
