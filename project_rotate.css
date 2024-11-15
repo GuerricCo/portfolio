@@ -23,6 +23,7 @@
     from {
         transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
     }
+
     to {
         transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
     }
@@ -45,13 +46,16 @@
 
 /* Lorsqu'un item est survolé, mettez-le en avant */
 .slider .item:hover {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(500px) scale(1.1); /* Augmente l'échelle */
-    z-index: 10; /* Met l'item au-dessus des autres */
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(500px) scale(1);
+    /* Augmente l'échelle */
+    z-index: 10;
+    /* Met l'item au-dessus des autres */
 }
 
 /* Arrêter l'animation de la rotation lorsque l'élément est survolé */
 .slider:hover {
-    animation-play-state: paused; /* Pause l'animation lorsque l'item est survolé */
+    animation-play-state: paused;
+    /* Pause l'animation lorsque l'item est survolé */
 }
 
 /* Style pour la boîte d'information */
@@ -64,10 +68,12 @@
     color: white;
     padding: 15px;
     border-radius: 5px;
-    display: none; /* Cachée par défaut */
+    display: none;
+    /* Cachée par défaut */
     z-index: 10;
 }
 
 .slider .item:hover .info-box {
-    display: block; /* Affiche la div lors du survol de l'item */
+    display: block;
+    /* Affiche la div lors du survol de l'item */
 }
