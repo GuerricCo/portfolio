@@ -1,71 +1,131 @@
+/**text letter by letter */
+document.querySelectorAll('.letter-by-letter').forEach(function(element) {
+    var text = element.innerText;
+    element.innerHTML = '';
+
+    text.split('').forEach(function(letter) {
+        var span = document.createElement('span');
+        span.innerText = letter;
+        element.appendChild(span);
+    });
+});
+
+
+/**defilement */
 let sections = document.querySelectorAll('section');
 let currentSectionIndex = 0;
 let isScrolling = false;
-let navLinks = document.querySelectorAll('header nav a');
+let navLinks = document.querySelectorAll('header nav ul li a');
 
-// Fonction pour mettre à jour les liens actifs
 function updateActiveLink() {
-    sections.forEach((section, index) => {
-        let rect = section.getBoundingClientRect();
+    let index = -1;
+
+    sections.forEach((section, i) => {
+        const rect = section.getBoundingClientRect();
         if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            navLinks[index].classList.add('active');
+            index = i;
         }
+    });
+
+    navLinks.forEach((link, i) => {
+        link.classList.toggle("active", i === index);
     });
 }
 
-// Fonction pour afficher la section et activer l'animation
 function showSection(index) {
-    // Vérifie que l'index est dans les limites et qu'un défilement n'est pas déjà en cours
     if (index < 0 || index >= sections.length || isScrolling) return;
 
     isScrolling = true;
     currentSectionIndex = index;
 
-    // Défile vers la section cible de manière fluide
     sections[index].scrollIntoView({ behavior: 'smooth' });
 
-    // Ajoute la classe active uniquement à la section en cours
     sections.forEach((section, i) => {
         if (i === index) {
-            section.classList.add('active'); // Ajoute `.active` à la section courante
+            section.classList.add('active');
         } else {
-            section.classList.remove('active'); // Retire `.active` des autres sections
+            section.classList.remove('active');
         }
     });
 
-    // Réinitialise `isScrolling` après la fin du défilement
     setTimeout(() => {
         isScrolling = false;
-    }, 600); // Ajuste ce délai pour qu'il corresponde à la durée de l'animation de défilement
+    }, 600);
 }
 
-// Gestion du défilement de la molette
 let scrollTimeout;
 window.addEventListener('wheel', (event) => {
     if (isScrolling) return;
 
-    // Démarre un timer pour éviter les appels successifs
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
         if (event.deltaY > 0) {
-            showSection(currentSectionIndex + 1); // Défiler vers le bas
+            showSection(currentSectionIndex + 1);
         } else if (event.deltaY < 0) {
-            showSection(currentSectionIndex - 1); // Défiler vers le haut
+            showSection(currentSectionIndex - 1);
         }
-    }, 100); // Ce délai court permet d'ignorer les défilements excessifs
+    }, 100);
 });
 
-// Ajout de la gestion du clic sur les liens du header
-navLinks.forEach((link, index) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault(); // Empêche le comportement par défaut du lien
-        showSection(index); // Affiche la section correspondante
-    });
-});
 
 window.addEventListener('scroll', updateActiveLink);
-updateActiveLink(); // Pour définir l'état au chargement
+updateActiveLink();
 
-// Initialise en affichant la première section
 showSection(0);
+
+
+
+/****contact ***/
+function validateForm() {
+    let form = document.getElementById("contact-form");
+    let name = form.name.value;
+    let email = form.email.value;
+    let message = form.message.value;
+    let isValid = true;
+
+    if (name === "") {
+        showError("name", "Veuillez entrer votre nom");
+        isValid = false;
+    } else {
+        hideError("name");
+    }
+
+    if (email === "") {
+        showError("email", "Veuillez entrer une adresse email valide");
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        showError("email", "L'adresse email n'est pas valide");
+        isValid = false;
+    } else {
+        hideError("email");
+    }
+
+    if (message === "") {
+        showError("message", "Veuillez entrer votre message");
+        isValid = false;
+    } else {
+        hideError("message");
+    }
+
+    return isValid;
+}
+
+
+function showError(field, message) {
+    let fieldGroup = document.querySelector(`#contact-form .form-group.${field}`);
+    let errorMessage = fieldGroup.querySelector('.error-message');
+    errorMessage.textContent = message;
+    errorMessage.style.display = 'block';
+}
+
+
+function hideError(field) {
+    let fieldGroup = document.querySelector(`#contact-form .form-group.${field}`);
+    let errorMessage = fieldGroup.querySelector('.error-message');
+    errorMessage.style.display = 'none';
+}
+
+function validateEmail(email) {
+    let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(email);
+}
