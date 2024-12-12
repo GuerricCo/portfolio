@@ -12,66 +12,44 @@ document.querySelectorAll('.letter-by-letter').forEach(function(element) {
 
 
 /**defilement */
-let sections = document.querySelectorAll('section');
+// Sélection des sections et initialisation de l'index actuel
+const sections = document.querySelectorAll("section");
 let currentSectionIndex = 0;
-let isScrolling = false;
-let navLinks = document.querySelectorAll('header nav ul li a');
+let isScrolling = false; // Pour éviter plusieurs défilements à la fois
 
-function updateActiveLink() {
-    let index = -1;
+// Gestionnaire de l'événement de défilement
+window.addEventListener("wheel", (event) => {
+  if (isScrolling) return; // Empêche le traitement si un défilement est déjà en cours
 
-    sections.forEach((section, i) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-            index = i;
-        }
-    });
+  const direction = event.deltaY > 0 ? 1 : -1; // 1 pour descendre, -1 pour monter
+  const currentSection = sections[currentSectionIndex];
 
-    navLinks.forEach((link, i) => {
-        link.classList.toggle("active", i === index);
-    });
-}
+  // Vérifie si on atteint les limites de la section
+  const sectionRect = currentSection.getBoundingClientRect();
+  const isAtBottom = direction === 1 && sectionRect.bottom <= window.innerHeight;
+  const isAtTop = direction === -1 && sectionRect.top >= 0;
 
-function showSection(index) {
-    if (index < 0 || index >= sections.length || isScrolling) return;
+  if ((direction === 1 && isAtBottom) || (direction === -1 && isAtTop)) {
+    const nextIndex = currentSectionIndex + direction;
 
-    isScrolling = true;
-    currentSectionIndex = index;
-
-    sections[index].scrollIntoView({ behavior: 'smooth' });
-
-    sections.forEach((section, i) => {
-        if (i === index) {
-            section.classList.add('active');
-        } else {
-            section.classList.remove('active');
-        }
-    });
-
-    setTimeout(() => {
-        isScrolling = false;
-    }, 600);
-}
-
-let scrollTimeout;
-window.addEventListener('wheel', (event) => {
-    if (isScrolling) return;
-
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-        if (event.deltaY > 0) {
-            showSection(currentSectionIndex + 1);
-        } else if (event.deltaY < 0) {
-            showSection(currentSectionIndex - 1);
-        }
-    }, 100);
+    if (nextIndex >= 0 && nextIndex < sections.length) {
+      isScrolling = true;
+      currentSectionIndex = nextIndex;
+      scrollToSection(currentSectionIndex);
+    }
+  }
 });
 
+// Fonction pour faire défiler jusqu'à une section
+function scrollToSection(index) {
+  const targetSection = sections[index];
+  targetSection.scrollIntoView({ behavior: "smooth" });
 
-window.addEventListener('scroll', updateActiveLink);
-updateActiveLink();
-
-showSection(0);
+  // Réinitialise le verrouillage après le défilement
+  setTimeout(() => {
+    isScrolling = false;
+  }, 100); // Ajustez le délai en fonction de la durée de l'animation
+}
 
 
 
