@@ -569,6 +569,7 @@ footer h3 {
     /* Réduction de la largeur de la timeline */
     .timeline {
         width: 80vw;
+        margin-bottom: 0;
     }
     .timeline .checkpoint {
         width: 100%;
@@ -664,16 +665,22 @@ footer h3 {
 
     /* Ajustement des projets (cards) */
     .projects-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Deux cartes par ligne */
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
         gap: 20px;
         justify-content: center;
     }
 
     .project-card {
-        width: 90%;
-        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        height: 40%;
+
     }
+    
+  
 
     .project-overlay h3 {
         font-size: 1rem; /* Texte plus petit */
@@ -681,7 +688,6 @@ footer h3 {
 
     /* Formulaire */
     .form-container {
-        width: 100%;
         padding: 20px;
     }
 
