@@ -10,7 +10,7 @@ body {
 
 section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000000;
     color: white;
 }
@@ -264,12 +264,7 @@ section#home {
     color: white;
 }
 
-#projects h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: var(--color-green);
-    padding-bottom: 2%;
-}
+
 
 .projects-container {
     display: flex;
@@ -336,11 +331,13 @@ section#home {
 #contact {
     background-color: #000000;
     color: white;
-    padding: 5% 0 0 0;
+    padding: 7% 0 0 0;
     text-align: center;
+    min-height: 70vh;
+
 }
 
-#contact h2 {
+.sous-titre {
     font-size: 2rem;
     margin-bottom: 20px;
     color: var(--color-green);
@@ -349,7 +346,8 @@ section#home {
 
 .form-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 100px auto;
+    margin-bottom: 0;
     background-color: #1c1c1c;
     padding: 30px;
     border-radius: 10px;
@@ -419,16 +417,6 @@ input[type="submit"]:hover {
     margin-right: auto;
 }
 
-footer {
-    margin-top: 50px;
-    color: white;
-}
-
-footer h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
 .grandcontact {
     display: flex;
     justify-content: center;
@@ -454,4 +442,149 @@ footer h3 {
 header nav a.active {
     color: var(--color-green);
     font-weight: bold;
+}
+
+
+
+/** timeline**/
+#formation{
+    height: 1800px;
+    padding-top: 400px;
+}
+
+#formation h2{
+    text-align: center;
+}
+
+
+
+.title{
+    text-align: center;
+}
+
+.title p{
+    color: #333;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    margin: 5em auto;
+    margin-top: 3em;
+    max-width: 34.15em;
+}
+
+.checkpoint{
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.checkpoint div{
+    border:2px solid #888;
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.checkpoint p{
+    line-height: 27px;
+    color: #ccc;
+}
+
+.checkpoint:nth-child(odd){
+    border-left: 3px solid #888;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even){
+    border-right: 3px solid #888;
+    padding-right: 3em;
+    transform: translateX(-17em);
+}
+
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before{
+    content: '';
+    background: #888;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before{
+    left: 0;
+}
+.checkpoint:nth-child(even)::before{
+    right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before{
+    content: '';
+    background: #fff;
+    box-shadow: 0 0 0.5em #0d71fc;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before{
+    left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before{
+    right: -0.5em;
+}
+
+
+
+footer {
+    padding-top: 50px;
+    color: white;
+    background-color: #000000;
+    padding-bottom: 5%;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1150px) {
+    .timeline{
+        width: 80vw;
+    }
+    .timeline .checkpoint{
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .timeline .checkpoint::before{
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .checkpoint div::before{
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);}
 }
