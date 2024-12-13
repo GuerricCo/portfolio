@@ -11,14 +11,19 @@ document.querySelectorAll('.letter-by-letter').forEach(function(element) {
 });
 
 
-/**defilement */
 // Sélection des sections et initialisation de l'index actuel
 const sections = document.querySelectorAll("section");
 let currentSectionIndex = 0;
 let isScrolling = false; // Pour éviter plusieurs défilements à la fois
 
+// Fonction pour vérifier si le mode responsive est activé
+function isResponsive() {
+  return window.innerWidth <= 767; // Tu peux ajuster cette valeur selon ton design
+}
+
 // Gestionnaire de l'événement de défilement
 window.addEventListener("wheel", (event) => {
+  if (isResponsive()) return; // Désactiver le défilement par section en mode responsive
   if (isScrolling) return; // Empêche le traitement si un défilement est déjà en cours
 
   const direction = event.deltaY > 0 ? 1 : -1; // 1 pour descendre, -1 pour monter
@@ -50,6 +55,13 @@ function scrollToSection(index) {
     isScrolling = false;
   }, 100); // Ajustez le délai en fonction de la durée de l'animation
 }
+
+// Réinitialise l'index de la section actuelle lors du redimensionnement de la fenêtre
+window.addEventListener("resize", () => {
+  if (isResponsive()) {
+    currentSectionIndex = 0; // Reset si nécessaire
+  }
+});
 
 
 

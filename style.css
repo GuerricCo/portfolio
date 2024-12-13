@@ -566,25 +566,169 @@ footer h3 {
 
 
 @media screen and (max-width: 1150px) {
-    .timeline{
+    /* Réduction de la largeur de la timeline */
+    .timeline {
         width: 80vw;
     }
-    .timeline .checkpoint{
+    .timeline .checkpoint {
         width: 100%;
         transform: none;
         padding-left: 0;
         padding-right: 0;
         border: none;
     }
-    .timeline .checkpoint::before{
+    .timeline .checkpoint::before {
         width: 3px;
         height: 4em;
         top: -2em;
         left: 50%;
         transform: translateX(-50%);
     }
-    .timeline .checkpoint div::before{
+    .timeline .checkpoint div::before {
         top: -0.5em;
         left: 50%;
-        transform: translateX(-50%);}
+        transform: translateX(-50%);
+    }
+
+    /* Global adjustments */
+    header {
+        position: static; /* Le header n'est plus fixe */
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #000000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a{
+        font-size: 1rem;
+    }
+    #imgprofile{
+        width: 200px;
+        height: 200px;
+    }
+    .menu-link {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2rem; /* Réduction de la taille des H1 */
+    }
+
+    h2, h3, p {
+        font-size: 1rem; /* Réduction des autres tailles de texte */
+    }
+
+    section#home {
+        padding-top: 20%;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    #presentation {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 10px 0px 10px;
+    }
+
+    #social{
+        justify-content: center;
+    }
+
+    #formation{
+        height: auto;
+        padding-top: 20%;
+    }
+
+    section{
+        min-height: 0;
+    }
+
+
+    /* Ajustement des projets (cards) */
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Deux cartes par ligne */
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .project-overlay h3 {
+        font-size: 1rem; /* Texte plus petit */
+    }
+
+    /* Formulaire */
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    input, textarea {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    input[type="submit"] {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding-bottom: 15%;
+    }
+
+    .neon-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: static;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Encore plus petit pour les très petits écrans */
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr; /* Une carte par ligne pour les très petits écrans */
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
