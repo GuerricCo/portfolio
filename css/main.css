@@ -1,0 +1,35 @@
+button {
+    font-size: 21px;
+    border-width: 0;
+    background-color: #E02626;
+    color: white;
+    padding: 15px 30px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.white {
+    color: white;
+}
+
+/* --- projets --- */
+
+.inactive_input {
+    filter: brightness(0.5) blur(1px);
+}
+
+.Html {
+    background-color: purple;
+    color: white;
+}
+
+.Js {
+    background-color: green;
+    color: white;
+}
+
+.Php {
+    background-color: #f0e10e;
+    color: black;
+}
+
