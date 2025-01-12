@@ -1,0 +1,22 @@
+:root {
+    --color-green: #16520f;
+    }
+    
+header a.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.greencolor{
+    color: var(--color-green);
+    text-shadow: 
+        0 0 5px var(--color-green),
+        0 0 10px var(--color-green),
+        0 0 20px var(--color-green),
+        0 0 30px #000000, 
+        0 0 40px #000000, 
+        0 0 50px #000000,
+        0 0 75px #000000;
+}
