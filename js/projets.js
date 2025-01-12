@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const projets_page = projets_pages.find(a => a.slug === projetslug);
 
     if (projets_page) {
+        // Mise à jour du titre et des métadonnées
         document.title = projets_page.title;
         document.getElementById("project-title-heading").innerText = projets_page.title;
-        document.getElementById("project-subtitle").innerText = projets_page.subtitle; // Ajout du sous-titre
 
-        // Ajout de l'image principale du projet
+        // Ajout de l'image principale
         const img_projets = document.createElement("img");
         img_projets.src = projets_page.image;
         img_projets.alt = `${projets_page.title} - Image`;
         div_image_principal.appendChild(img_projets);
 
-        // Injection du contenu dynamique
+        // Injection directe du contenu HTML depuis data_projets.js
         div_content.innerHTML = projets_page.content;
 
-        // Ajout des informations de l'auteur et de la date
+        // Auteur et date
         document.getElementById("project-author").innerText = projets_page.author;
         document.getElementById("project-date").innerText = new Date(projets_page.date).toLocaleDateString();
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.head.appendChild(newMetaDescription);
         }
 
-        // Tag dynamique (par exemple : FULL HTML, JS, etc.)
+        // Ajout du tag dynamique
         const tag_projets = document.createElement("p");
         tag_projets.textContent = projets_page.tag;
         tag_projets.className = "tag_cards";
@@ -61,38 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 break;
         }
         div_tag_projets.appendChild(tag_projets);
-
-        // Section Contexte
-        const div_contexte = document.createElement("section");
-        const contexteTitle = document.createElement("h3");
-        contexteTitle.textContent = "Contexte";
-        const contexteContent = document.createElement("p");
-        contexteContent.textContent = projets_page.contexte;
-        div_contexte.appendChild(contexteTitle);
-        div_contexte.appendChild(contexteContent);
-        div_content.appendChild(div_contexte);
-
-        // Section Mission
-        const div_mission = document.createElement("section");
-        const missionTitle = document.createElement("h3");
-        missionTitle.textContent = "Mission";
-        const missionContent = document.createElement("p");
-        missionContent.textContent = projets_page.mission;
-        div_mission.appendChild(missionTitle);
-        div_mission.appendChild(missionContent);
-        div_content.appendChild(div_mission);
-
-        // Section Résultat avec iframe
-        const div_resultat = document.createElement("section");
-        const resultatTitle = document.createElement("h3");
-        resultatTitle.textContent = "Résultat";
-        const iframe = document.createElement("iframe");
-        iframe.src = projets_page.iframeSrc;
-        iframe.width = "100%";
-        iframe.height = "600px";
-        div_resultat.appendChild(resultatTitle);
-        div_resultat.appendChild(iframe);
-        div_content.appendChild(div_resultat);
     } else {
         document.body.innerHTML = "<p>Projet non trouvé.</p>";
     }
