@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/actualites.css">
+
+ 
 </head>
 <body>
     <header>
@@ -16,7 +15,7 @@
             <ul>
                 <li><a href="#home">A propos</a></li>
                 <li><a href="#formation">Formation</a></li>
-                <li><a href="#projects">Projets</a></li>
+                <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -98,30 +97,21 @@
 
         </div>
     </section>
-    <section class="projets">
-        <div id="filter_manage">
-            <button id="input_filter_all">Tout Afficher</button>
-            <label class="custom-button Html">
-                <input type="checkbox" value="FULL HTML" id="checkbox" class="input_filter_tags" />
-                <span class="button-text">FULL HTML</span>
-            </label>
-            <label class="custom-button Js">
-                <input type="checkbox" value="JS" id="checkbox" class="input_filter_tags" />
-                <span class="button-text">JS</span>
-            </label>
-            <label class="custom-button Php">
-                <input type="checkbox" value="PHP" id="checkbox" class="input_filter_tags" />
-                <span class="button-text">PHP</span>
-            </label>
+    <section id="projets">
+        <div id="container_projets">
+        <h2 class="sous-titre">Projets</h2>
+        <div id="project_projets">
+            <ul id="filter_cards_project"></ul>
+            <button class="neon-button"><a  href="/projets">Découvrir plus</a></button>
         </div>
-        <ul id="filter_cards"></ul>
+        </div>
     </section>
 
 
 
     <section id="contact">
         <div class="form-container">
-            <h2 class="sous-titre">Contactez-nous</h2>
+            <h2 class="sous-titre">Contactez-moi!</h2>
             <form id="contact-form" action="https://formspree.io/f/mgvezdao" method="POST" novalidate onsubmit="return validateForm()">
                 <input type="hidden" name="contact_number" value="697483">
     

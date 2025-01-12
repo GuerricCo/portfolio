@@ -1,6 +1,6 @@
 export const projets_pages = [
     {
-        "title": "Site collège",
+        "title": "La Martiniere Monplaisir",
         "author": "Guerric COCHELIN",
         "date": "2024-12-03",
         "tag": "FULL HTML",
@@ -49,7 +49,7 @@ export const projets_pages = [
             "<li><a href='#'>La conquête de Mars : quels enjeux ?</a></li>\n" +
             "</ul>\n" +
             "</aside>",
-        "image": "/img/earthsurface.jpg",
+        "image": "/img/la_martiniere.png",
         "slug": "site-ecole",
         "metaDescription": "Découvrez le voyage interplanétaire vers la planète b2seomds. Explorez les défis, les technologies nécessaires et les risques d'une mission spatiale fascinante."
     }

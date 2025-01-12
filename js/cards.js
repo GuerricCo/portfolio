@@ -1,23 +1,41 @@
 const projets = [
     {
-        "description": "Projet réalisé lors d'une semaine de partiel à My-Digital-School",
-        "url": "projets/site-ecole",
-        "src": "/img/earthsurface.jpg",
-        "alt": "earthsurface",
-        "title": "Site collège",
-        "title2": "",
+        "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
+        "url": "projets/La_Martiniere_Monplaisir",
+        "src": "/img/la_martiniere.png",
+        "alt": "La Martiniere Monplaisir",
+        "title": "La Martinière Monlaisir",
+        "title2": "Projet de Partiel B1",
         "tags": ["FULL HTML"],
     }
 ]
 
 const projets_actu = [
     {
-        "description": "L'html a toujours fasciné l'humanité. Alors que les missions lunaires et martiennes ont fait naître des rêves d'aventure interplanétaire...",
-        "url": "projets/site-ecole",
-        "src": "/img/earthsurface.jpg",
-        "alt": "earthsurface",
-        "title": "Voyage entre la Terre et la planète b2seomds",
-        "title2": "",
+        "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
+        "url": "projets/La_Martiniere_Monplaisir",
+        "src": "/img/la_martiniere.png",
+        "alt": "La Martiniere Monplaisir",
+        "title": "La Martinière Monplaisir",
+        "title2": "Projet de Partiel B1",
+        "tags": ["FULL HTML"],
+    },
+    {
+        "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
+        "url": "projets/La_Martiniere_Monplaisir",
+        "src": "/img/la_martiniere.png",
+        "alt": "La Martiniere Monplaisir",
+        "title": "La Martinière Monlaisir",
+        "title2": "Projet de Partiel B1",
+        "tags": ["FULL HTML"],
+    },
+    {
+        "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
+        "url": "projets/La_Martiniere_Monplaisir",
+        "src": "/img/la_martiniere.png",
+        "alt": "La Martiniere Monplaisir",
+        "title": "La Martinière Monlaisir",
+        "title2": "Projet de Partiel B1",
         "tags": ["FULL HTML"],
     }
 ]
@@ -25,35 +43,35 @@ const projets_actu = [
 document.addEventListener("DOMContentLoaded", () => {
 
     const filter_cards = document.getElementById("filter_cards");
-    const filter_cards_actu = document.getElementById("filter_cards_actu");
+    const filter_cards_project = document.getElementById("filter_cards_project");
     const tags_input = document.querySelectorAll(".input_filter_tags");
     const all_input = document.getElementById("input_filter_all");
     let checked = new Set();
 
     if (filter_cards) {
         create_cards(projets, filter_cards);
-    } else if (filter_cards_actu) {
-        create_cards(projets_actu, filter_cards_actu);
+    } else if (filter_cards_project) {
+        create_cards(projets_actu, filter_cards_project);
     }
 
     function create_cards(projets, filter_cards) {
-        projets.forEach(article => {
+        projets.forEach(project => {
             let cards = document.createElement("li");
             cards.className = "cards";
 
             let link = document.createElement("a");
-            link.href = article.url;
+            link.href = project.url;
             cards.appendChild(link);
 
             let img_cards = document.createElement("img");
-            img_cards.src = article.src;
-            img_cards.alt = article.alt;
-            if (article.forme === "portrait") {
+            img_cards.src = project.src;
+            img_cards.alt = project.alt;
+            if (project.forme === "portrait") {
                 img_cards.style.aspectRatio = "9/16";
                 img_cards.style.objectFit = "contain";
                 img_cards.style.height = "300px";
             }
-            if (article.forme === "paysage") {
+            if (project.forme === "paysage") {
                 img_cards.style.objectFit = "fill";
             }
             link.appendChild(img_cards);
@@ -67,23 +85,23 @@ document.addEventListener("DOMContentLoaded", () => {
             infos_cards.appendChild(content);
 
             let title_cards = document.createElement("h2");
-            title_cards.textContent = article.title;
+            title_cards.textContent = project.title;
             content.appendChild(title_cards);
 
             let title2_cards = document.createElement("h4");
-            title2_cards.textContent = article.title2;
+            title2_cards.textContent = project.title2;
             title2_cards.style.marginBottom = 0;
             content.appendChild(title2_cards);
 
             let desc_cards = document.createElement("p");
-            desc_cards.textContent = article.description;
+            desc_cards.textContent = project.description;
             content.appendChild(desc_cards);
 
             let infos_tags = document.createElement("div");
             infos_tags.className = "infos_tags";
             infos_cards.appendChild(infos_tags);
 
-            article.tags.forEach(tag => {
+            project.tags.forEach(tag => {
                 let tag_cards = document.createElement("p");
                 tag_cards.textContent = tag;
                 tag_cards.className = "tags_cards";

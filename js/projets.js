@@ -1,7 +1,7 @@
 import { projets_pages } from './data_projets.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const div_tag_projets = document.getElementById("article-meta");
+    const div_tag_projets = document.getElementById("project-meta");
     const pathSegments = window.location.pathname.split("/");
     const projetslug = pathSegments[pathSegments.length - 1];
     const projets_page = projets_pages.find(a => a.slug === projetslug);
@@ -9,16 +9,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (projets_page) {
         document.title = projets_page.title;
-        document.getElementById("article-title-heading").innerText = projets_page.title;
+        document.getElementById("project-title-heading").innerText = projets_page.title;
 
         const img_projets = document.createElement("img");
         img_projets.src = projets_page.image;
         div_image_principal.appendChild(img_projets);
 
-        document.getElementById("article-content").innerHTML = projets_page.content;
+        document.getElementById("project-content").innerHTML = projets_page.content;
 
-        document.getElementById("article-author").innerText = projets_page.author;
-        document.getElementById("article-date").innerText = new Date(projets_page.date).toLocaleDateString();
+        document.getElementById("project-author").innerText = projets_page.author;
+        document.getElementById("project-date").innerText = new Date(projets_page.date).toLocaleDateString();
         const metaDescriptionTag = document.querySelector('meta[name="description"]');
         if (metaDescriptionTag) {
             metaDescriptionTag.setAttribute("content", projets_page.metaDescription);
@@ -53,6 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         div_tag_projets.appendChild(tag_projets);
     } else {
-        document.body.innerHTML = "<p>Article not found.</p>";
+        document.body.innerHTML = "<p>project not found.</p>";
     }
 });
