@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("project-title-heading").innerText = projets_page.title;
 
         // Ajout de l'image principale
-        const img_projets = document.createElement("img");
-        img_projets.src = projets_page.image;
-        img_projets.alt = `${projets_page.title} - Image`;
-        div_image_principal.appendChild(img_projets);
+        //**const img_projets = document.createElement("img");
+        //img_projets.src = projets_page.image;
+        //img_projets.alt = `${projets_page.title} - Image`;
+        //div_image_principal.appendChild(img_projets);
 
         // Injection directe du contenu HTML depuis data_projets.js
         div_content.innerHTML = projets_page.content;
