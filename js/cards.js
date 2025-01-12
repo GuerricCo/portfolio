@@ -6,7 +6,16 @@ const projets = [
         "alt": "La Martiniere Monplaisir",
         "title": "La Martinière Monlaisir",
         "title2": "Projet de Partiel B1",
-        "tags": ["FULL HTML"],
+        "tags": ["HTML"],
+    },
+    {
+        "description": "Developpement d'un jeu sur summoners wars",
+        "url": "projets/summonersdle",
+        "src": "img/summonersdle.png",
+        "alt": "Summonersdle",
+        "title": "Summonersdle",
+        "title2": "Projet personnel",
+        "tags": ["HTML", "JS"],
     }
 ]
 
@@ -18,7 +27,16 @@ const projets_actu = [
         "alt": "La Martiniere Monplaisir",
         "title": "La Martinière Monplaisir",
         "title2": "Projet de Partiel B1",
-        "tags": ["FULL HTML"],
+        "tags": ["HTML"],
+    },
+    {
+        "description": "Developpement d'un jeu sur summoners wars",
+        "url": "projets/summonersdle",
+        "src": "img/summonersdle.png",
+        "alt": "Summonersdle",
+        "title": "Summonersdle",
+        "title2": "Projet personnel",
+        "tags": ["HTML", "JS"],
     },
     {
         "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
@@ -27,16 +45,7 @@ const projets_actu = [
         "alt": "La Martiniere Monplaisir",
         "title": "La Martinière Monlaisir",
         "title2": "Projet de Partiel B1",
-        "tags": ["FULL HTML"],
-    },
-    {
-        "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
-        "url": "projets/la-martiniere-monplaisir",
-        "src": "img/la_martiniere.png",
-        "alt": "La Martiniere Monplaisir",
-        "title": "La Martinière Monlaisir",
-        "title2": "Projet de Partiel B1",
-        "tags": ["FULL HTML"],
+        "tags": ["HTML"],
     }
 ]
 
@@ -109,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 tag_cards.style.borderRadius = "5px";
 
                 switch (tag) {
-                    case "FULL HTML":
+                    case "HTML":
                         tag_cards.style.backgroundColor = "purple";
                         tag_cards.style.color = "white";
                         break;

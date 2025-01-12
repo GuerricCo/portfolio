@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Application de la couleur en fonction du tag
         switch (projets_page.tag) {
-            case "FULL HTML":
+            case "HTML":
                 tag_projets.style.backgroundColor = "purple";
                 tag_projets.style.color = "white";
                 break;

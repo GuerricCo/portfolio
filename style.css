@@ -362,6 +362,10 @@ section#projets {
     gap: 10%;
 }
 
+.infos_tags{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #project_projets a {
     color: white;
@@ -409,7 +413,6 @@ section#projets {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     box-sizing: border-box;
     transition: top 0.4s ease;
 }
