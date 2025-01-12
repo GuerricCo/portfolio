@@ -507,21 +507,7 @@ input[type="submit"]:hover {
     font-size: 0.9rem;
 }
 
-.line {
-    margin-top: 50px;
-    height: 2px;
-    background-color: var(--color-green);
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.grandcontact {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-}
 
 
 .neon-icon {
@@ -555,7 +541,21 @@ footer h3 {
     text-align: center;
 }
 
+.line {
+    margin-top: 50px;
+    height: 2px;
+    background-color: var(--color-green);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.grandcontact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
 
 
 
