@@ -23,6 +23,16 @@ body {
 header {
     padding: 20px 100px 0 60px
 }
+header .tags {
+    display: flex;
+    gap: 15px;
+}
+header .tags a {
+    text-decoration: none;}
+    
+header .tag a:hover{
+    color: var(--color-green);
+}
 
 header a.logo {
     text-decoration: none;
