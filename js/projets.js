@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 break;
         }
 
-        // Sélectionner l'élément 'project-tag' pour afficher le tag
-        const projectTagElement = document.getElementById("project-tag");
-        if (projectTagElement) {
-            projectTagElement.textContent = projets_page.tag; // Assigner le tag directement
+        // Ajout du tag à un endroit spécifique et séparé
+        if (div_tag_projets) {
+            div_tag_projets.innerHTML = ''; // Vider le contenu de div_tag_projets pour éviter le mélange
+            div_tag_projets.appendChild(tag_projets); // Ajouter le tag au bon endroit
         }
     } else {
         document.body.innerHTML = "<p>Projet non trouvé.</p>";
