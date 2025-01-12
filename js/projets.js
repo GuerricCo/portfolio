@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const activateIframeButton = document.getElementById("activate-iframe");
         if (activateIframeButton) {
             activateIframeButton.addEventListener("click", () => {
-                const iframeWrapper = document.getElementById("iframe-wrapper");
+                const iframeWrapper = document.querySelector(".iframe-container");
                 iframeWrapper.classList.add("active"); // Ajoute la classe active pour activer l'iframe
             });
         }
