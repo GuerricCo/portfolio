@@ -2,42 +2,14 @@
     --color-green: #16520f;
 }
 
-
-/* Classe pour aligner les éléments avec l'iframe */
-.content-align {
-    width: 70%; /* Même largeur que l'iframe */
-    margin: 20px auto; /* Centrer horizontalement */
-}
-
-/* Titre principal */
-h1, h2 {
-    margin-left: 0; /* Retirer la marge à gauche, pour qu'ils commencent à la même position */
-    padding-left: 0; /* Retirer les éventuels espacements internes */
-    width: 100%; /* S'assurer qu'ils s'étendent bien à la largeur */
-}
-
-/* Contenu principal */
-#project-content {
-    width: 70%; /* Même largeur que l'iframe */
-    margin: 20px auto; /* Centrer horizontalement */
-}
-
-/* Style pour la section des titres et contenu */
-section {
-    width: 70%; /* Assurez-vous que toutes les sections suivent la même largeur */
-    margin: 20px auto; /* Centrer chaque section */
-}
-
-
-
-
 h1 {
     font-size: 60px;
-
+    margin: 20px 0;
 }
 
 h2 {
     font-size: 30px;
+    margin: 0;
 }
 
 body {
@@ -109,7 +81,7 @@ footer h3 {
 /* Style du conteneur iframe */
 .iframe-container {
     position: relative;
-    width: 70%;
+    width: 70%; /* Largeur de la section qui s'applique aussi à l'iframe */
     height: 600px;
     margin: 20px auto;
     display: flex;
@@ -126,8 +98,8 @@ footer h3 {
     opacity: 0.5;
     transition: opacity 0.3s ease;
     border-radius: 8px;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* L'iframe prend toute la largeur du conteneur */
+    height: 100%; /* L'iframe prend toute la hauteur du conteneur */
 }
 
 /* Style de l'iframe quand activée */

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="project-title">project Title</title>
+    <title id="project-title">Project Title</title>
     <link rel="stylesheet" href="../css/project.css">
 </head>
 
@@ -12,31 +11,40 @@
     <header>
         <a href="/portfolio" class="logo">Port<span class="greencolor">folio</span></a>
     </header>
+
     <main>
-        <h1 id="project-title-heading" class="content-align"></h1>
-        <h2 id="project-subtitle" class="content-align"></h2>
-        <div id="div_image_principal" class="content-align"></div>
-        <section class="content-align">
+        <h1 id="project-title-heading"></h1>
+        <h2 id="project-subtitle"></h2>
+        <div id="div_image_principal"></div>
+
+        <section>
             <article>
-                <div id="project-meta" class="content-align"></div>
-                <div id="project-content" class="content-align"></div>
+                <div id="project-meta"></div>
+                <div id="project-content"></div>
                 <p>Published by <span id="project-author"></span> on <span id="project-date"></span></p>
             </article>
+
+            <!-- Conteneur iframe avec la classe d'activation -->
+            <div class="iframe-container" id="iframe-wrapper">
+                <iframe id="result-iframe" src="../la-martiniere-monplaisir/page1.html" title="Project XYZ"></iframe>
+                <button id="activate-iframe" class="iframe-button">Activer le contenu</button>
+            </div>
         </section>
+
+        <div class="section-line"></div>
     </main>
+
     <footer>
         <div class="line"></div>
         <h3>Me Contacter:</h3>
         <div class="grandcontact">
-        <img src="../img/icons8-github.svg" alt="GitHub" class="neon-icon">
-        <img src="../img/icons8-linkedin.svg" alt="LinkedIn" class="neon-icon">
-        <img src="../img/icons8-discorde.svg" alt="Discorde" class="neon-icon">
-        <a href="mailto: cochelin.guerric@hotmail.com" target="_blank"><img src="../img/icons8-apple-mail.svg" alt="Mail" class="neon-icon"></a>
-    </div>
-    
+            <img src="../img/icons8-github.svg" alt="GitHub" class="neon-icon">
+            <img src="../img/icons8-linkedin.svg" alt="LinkedIn" class="neon-icon">
+            <img src="../img/icons8-discorde.svg" alt="Discorde" class="neon-icon">
+            <a href="mailto:cochelin.guerric@hotmail.com" target="_blank"><img src="../img/icons8-apple-mail.svg" alt="Mail" class="neon-icon"></a>
+        </div>
     </footer>
-    <script type="module" src="../js/projets.js"></script>
-    
-</body>
 
+    <script type="module" src="../js/projets.js"></script>
+</body>
 </html>
