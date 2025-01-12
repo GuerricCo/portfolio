@@ -2,7 +2,7 @@ const projets = [
     {
         "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
         "url": "projets/la-martiniere-monplaisir",
-        "src": "./img/la_martiniere.png",
+        "src": "img/la_martiniere.png",
         "alt": "La Martiniere Monplaisir",
         "title": "La Martinière Monlaisir",
         "title2": "Projet de Partiel B1",
@@ -14,7 +14,7 @@ const projets_actu = [
     {
         "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
         "url": "projets/la-martiniere-monplaisir",
-        "src": "./img/la_martiniere.png",
+        "src": "img/la_martiniere.png",
         "alt": "La Martiniere Monplaisir",
         "title": "La Martinière Monplaisir",
         "title2": "Projet de Partiel B1",
@@ -23,7 +23,7 @@ const projets_actu = [
     {
         "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
         "url": "projets/la-martiniere-monplaisir",
-        "src": "./img/la_martiniere.png",
+        "src": "img/la_martiniere.png",
         "alt": "La Martiniere Monplaisir",
         "title": "La Martinière Monlaisir",
         "title2": "Projet de Partiel B1",
@@ -32,7 +32,7 @@ const projets_actu = [
     {
         "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
         "url": "projets/la-martiniere-monplaisir",
-        "src": "./img/la_martiniere.png",
+        "src": "img/la_martiniere.png",
         "alt": "La Martiniere Monplaisir",
         "title": "La Martinière Monlaisir",
         "title2": "Projet de Partiel B1",
