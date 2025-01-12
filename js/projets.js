@@ -2,7 +2,6 @@ import { projets_pages } from './data_projets.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const div_tag_projets = document.getElementById("project-meta");
-    const div_image_principal = document.getElementById('div_image_principal');
     const div_content = document.getElementById("project-content");
     const pathSegments = window.location.pathname.split("/");
     const projetslug = pathSegments[pathSegments.length - 1];
@@ -13,14 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.title = projets_page.title;
         document.getElementById("project-title-heading").innerText = projets_page.title;
 
-        // Ajout de l'image principale
-        //**const img_projets = document.createElement("img");
-        //img_projets.src = projets_page.image;
-        //img_projets.alt = `${projets_page.title} - Image`;
-        //div_image_principal.appendChild(img_projets);
-
         // Injection directe du contenu HTML depuis data_projets.js
         div_content.innerHTML = projets_page.content;
+
+        // Gestionnaire d'événements pour le bouton activer l'iframe
+        const activateIframeButton = document.getElementById("activate-iframe");
+        if (activateIframeButton) {
+            activateIframeButton.addEventListener("click", () => {
+                const iframeWrapper = document.getElementById("iframe-wrapper");
+                iframeWrapper.classList.add("active"); // Ajoute la classe active pour activer l'iframe
+            });
+        }
 
         // Auteur et date
         document.getElementById("project-author").innerText = projets_page.author;
