@@ -62,7 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 tag_projets.style.color = "black";
                 break;
         }
-        div_tag_projets.appendChild(tag_projets);
+
+        // Ajout du tag à un endroit spécifique et séparé
+        if (div_tag_projets) {
+            div_tag_projets.innerHTML = ''; // Vider le contenu de div_tag_projets pour éviter le mélange
+            div_tag_projets.appendChild(tag_projets); // Ajouter le tag au bon endroit
+        }
     } else {
         document.body.innerHTML = "<p>Projet non trouvé.</p>";
     }
