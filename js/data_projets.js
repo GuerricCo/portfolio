@@ -25,8 +25,7 @@ export const projets_pages = [
         "    <iframe id='result-iframe' src='../la-martiniere-monplaisir/page1.html' title='Site XYZ'></iframe>\n" +
         "    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
         "</div>\n" +
-        "</section>\n" +
-        "<div class='section-line'></div>\n",
+        "</section>\n",
         "slug": "la-martiniere-monplaisir",
         "metaDescription": "Découvrez le voyage interplanétaire vers la planète b2seomds. Explorez les défis, les technologies nécessaires et les risques d'une mission spatiale fascinante."
     }
