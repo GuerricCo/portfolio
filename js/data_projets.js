@@ -50,7 +50,7 @@ export const projets_pages = [
             "</ul>\n" +
             "</aside>",
         "image": "/img/la_martiniere.png",
-        "slug": "site-ecole",
+        "slug": "la-martiniere-monplaisir",
         "metaDescription": "Découvrez le voyage interplanétaire vers la planète b2seomds. Explorez les défis, les technologies nécessaires et les risques d'une mission spatiale fascinante."
     }
 ];
