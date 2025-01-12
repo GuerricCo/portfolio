@@ -1,0 +1,548 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+}
+
+h1 {
+    padding-top: 40px;
+    font-size: 90px;
+    padding-left: 300px;
+    text-align: left;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+
+p {
+    font-size: 16px;
+    font-family: 'Literata', serif;
+}
+
+a {
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+#Logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+
+#connexion {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Literata', serif;
+}
+
+.search-container {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 0;
+}
+
+.search-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+#region img {
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/****main-header*****/
+
+#menu-image img {
+    width: 230px;
+    height: 176px;
+    border-radius: 20px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 999;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hero-menu a {
+    font-size: 30px;
+    font-family: 'Mirza', serif;
+}
+
+#hero-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+}
+
+.menu-element a {
+    padding: 30px;
+    color: white;
+}
+
+#main-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img2/2.webp);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 500px;
+}
+
+#main-header p {
+    text-align: left;
+    margin: 40px 20% 40px 40%;
+    font-size: 18px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+#main-header {
+    background-size: cover;
+    color: white;
+    text-align: center;
+    animation: changeBackground 20s infinite;
+}
+
+/***********maison des lycéens********/
+.image img {
+    width: 595px;
+    height: 345px;
+    border-radius: 30px;
+}
+
+.text-frame {
+    width: 550px;
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+.text-frame2 {
+    width: 650px;
+    padding-top: 50px;
+    text-align: center;
+
+}
+
+.button1:hover,
+.button2:hover {
+    opacity: 0.8;
+}
+
+.button1:active,
+.button2:active {
+    transform: translateY(2px);
+}
+
+.button1 {
+    background-color: #256091;
+    color: white;
+    padding: 10px 40px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    font-size: 16px;
+}
+
+.button2 {
+    background-color: #BD9EE1;
+    color: white;
+    padding: 10px 40px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 90px 0;
+    background-color: rgb(189, 158, 225);
+    height: 160px;
+}
+
+.content2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(37, 96, 145);
+    height: 160px;
+    width: 90%;
+    border-radius: 60px 0px 0px 60px;
+    margin: 90px 0 90px 0;
+    margin-left: auto;
+
+}
+
+.content3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #92CCF9;
+    height: 160px;
+    width: 90%;
+    border-radius: 0px 60px 60px 0px;
+    margin: 90px 0 90px 0;
+    margin-right: auto;
+}
+
+.content4 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 90px 0;
+    background-color: #6434A4;
+    height: 160px;
+}
+
+.title2 p {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.highlight {
+    font-weight: bold;
+    display: inline;
+}
+
+.title3 p {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.title-left {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    padding: 30px 0px 0px 13%;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+.title-right {
+    padding: 0px 0px 0 79%;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+.title-left2 {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    padding: 30px 0px 0px 12%;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+.title-right2 {
+    padding: 0px 0px 0 82%;
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+
+/***********logo************/
+#logo img {
+    height: 285px;
+    width: 199px;
+}
+
+#logo {
+    margin: 200px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*************footer**********/
+footer {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: #470094;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer #titre-footer {
+    padding-left: 50px;
+}
+
+footer #logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 20px;
+}
+
+h4,
+h5 {
+    font-size: 25px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+footer h4 {
+    padding-bottom: 30px;
+}
+
+footer h5 {
+    text-decoration: underline;
+}
+
+footer #logo-footer img {
+    width: 300px;
+    height: 50px;
+}
+
+footer #reseaux img {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+footer img {
+    object-fit: cover;
+    padding: 5px;
+}
+
+
+.button1 a {
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+
+
+    #menu-image img {
+        display: none;
+    }
+
+    #region img {
+        width: 80%;
+        margin: 0;
+    }
+
+    .search-container {
+        width: 10%;
+        height: 10%;
+    }
+
+    #connexion {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    #hero-menu {
+        display: block;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding-left: 5%;
+        text-align: center;
+        padding: 0;
+    }
+
+    #main-header p {
+        text-align: center;
+        margin: 0;
+    }
+
+    a {
+        font-size: 15;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #connexion {
+        align-items: end;
+        padding-right: 30px;
+        padding-top: 20px;
+
+    }
+
+    #logo img {
+        width: 50%;
+        height: 50%;
+    }
+
+
+    .search-container {
+        padding: 0;
+        width: 20%;
+        height: 30%;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    footer #titre-footer {
+        padding: 0;
+    }
+
+    footer #logo-footer {
+        display: block;
+    }
+
+    .menu-element a {
+        padding: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .menu-element {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .title-left,
+    .title-right,
+    .title-left2,
+    .title-right2 {
+        padding: 0;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content,
+    .content2,
+    .content3,
+    .content4 {
+        padding-top: 40px;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .text-frame2,
+    .text-frame {
+
+        padding-top: 0px;
+        width: auto;
+    }
+
+    .content3 {
+        margin: 0;
+        width: auto;
+    }
+
+    .title2 p {
+        height: auto;
+    }
+
+    .content2 {
+        margin: 0;
+    }
+
+    .title3 p {
+        color: black;
+    }
+
+    .content2 {
+        position: relative;
+    }
+
+    .content2 img {
+        position: absolute;
+        z-index: 999;
+        top: 10px;
+        left: 0;
+    }
+
+    .article {
+        text-align: center;
+    }
+
+    .content2 {
+        width: auto;
+        padding-top: 250px;
+    }
+
+    .title-right {
+        padding-top: 80px;
+    }
+
+    .title-right2 {
+
+        padding-top: 150px;
+    }
+
+    .content3 {
+        padding-top: 120px;
+    }
+
+
+
+    .content4 {
+        position: relative;
+        margin: 0;
+        margin-top: 240px;
+    }
+
+    .content4 img {
+        position: absolute;
+        z-index: 999;
+        bottom: 180px;
+        left: 0;
+    }
+
+    .title4 p {
+        height: auto;
+    }
+
+    #logo {
+        margin-top: 40px;
+    }
+}
