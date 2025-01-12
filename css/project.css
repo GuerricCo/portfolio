@@ -5,6 +5,7 @@
 h1 {
     font-size: 60px;
     margin: 20px 0;
+    text-align: center; /* Centrage du h1 */
 }
 
 h2 {
@@ -81,9 +82,8 @@ footer h3 {
 /* Style du conteneur iframe */
 .iframe-container {
     position: relative;
-    width: 70%; /* Largeur de la section qui s'applique aussi à l'iframe */
+    width: 100%; /* Utilise 100% de la largeur de son parent */
     height: 600px;
-    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,8 +98,8 @@ footer h3 {
     opacity: 0.5;
     transition: opacity 0.3s ease;
     border-radius: 8px;
-    width: 100%; /* L'iframe prend toute la largeur du conteneur */
-    height: 100%; /* L'iframe prend toute la hauteur du conteneur */
+    width: 100%;
+    height: 100%;
 }
 
 /* Style de l'iframe quand activée */
@@ -139,4 +139,10 @@ footer h3 {
     height: 2px;
     background-color: var(--color-green);
     width: 90%;
+}
+
+/* Style de l'article qui contient le contenu global */
+article {
+    width: 80%; /* Largeur de l'article */
+    margin: 0 auto; /* Centrer l'article */
 }
