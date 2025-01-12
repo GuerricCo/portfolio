@@ -20,7 +20,6 @@ export const projets_pages = [
         "<p>Depuis son lancement, XYZ a vu une augmentation significative du nombre d'utilisateurs actifs et a reçu des retours très positifs concernant sa facilité d'utilisation et sa rapidité. Le site est devenu une référence dans son domaine.</p>\n" +
         "<iframe src='../la-martiniere-monplaisir/page1.html' width='100%' height='600px' title='Site XYZ'></iframe>\n" +
         "</section>\n",
-        "image": "../img/la_martiniere.png",
         "slug": "la-martiniere-monplaisir",
         "metaDescription": "Découvrez le voyage interplanétaire vers la planète b2seomds. Explorez les défis, les technologies nécessaires et les risques d'une mission spatiale fascinante."
     }
