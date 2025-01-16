@@ -328,9 +328,6 @@ button{
     #contact{
         min-height: 0;
     }
-    #filter_cards_project{
-        grid-template-columns: repeat(2, 1fr);
-    }
     section#contact{
         padding: 0;
     }
@@ -467,7 +464,7 @@ button{
     .projects{
         flex-direction: column;
     }
-    #filter_card{
+    #filter_cards{
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         margin: 0;
@@ -482,7 +479,7 @@ button{
         width: 100%;
     }
     .custom-button, #input_filter_all{
-        min-width: none;
+        min-width: max-content;
         border: 15px double white;
     }
 
@@ -490,7 +487,13 @@ button{
         padding: 8px;
         font-size: 0.8em;
     }
-    
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
   
 
     .project-overlay h3 {
@@ -539,7 +542,7 @@ button{
     .projects{
         flex-direction: column;
     }
-    #filter_card{
+    #filter_cards{
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         margin: 0;
@@ -554,7 +557,7 @@ button{
         width: 100%;
     }
     .custom-button, #input_filter_all{
-        min-width: none;
+        min-width: max-content;
         border: 15px double white;
     }
 
@@ -607,4 +610,8 @@ button{
     .form-container{
         margin: 0;
     }
+    .projects-container {
+        grid-template-columns: 1fr; /* Une carte par ligne pour les très petits écrans */
+    }
+
 }

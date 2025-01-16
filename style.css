@@ -685,13 +685,7 @@ footer h3 {
 
 
     /* Ajustement des projets (cards) */
-    .projects-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-    }
+    
 
     .project-card {
         display: flex;
@@ -758,10 +752,7 @@ footer h3 {
         font-size: 1.8rem; /* Encore plus petit pour les très petits écrans */
     }
 
-    .projects-container {
-        grid-template-columns: 1fr; /* Une carte par ligne pour les très petits écrans */
-    }
-
+    
     .project-card {
         width: 100%;
         margin-bottom: 10px;
