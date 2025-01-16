@@ -322,15 +322,208 @@ button{
     background-color: #33ffaf;
     color: white;
 }
-
-
 @media screen and (max-width: 1150px) {
+
+    /* Réduction de la largeur de la timeline */
+    #contact{
+        min-height: 0;
+    }
     #filter_cards_project{
         grid-template-columns: repeat(2, 1fr);
     }
+    section#contact{
+        padding: 0;
+    }
+    .timeline p{
+        text-align: center;
+    }
+    img#imgprofile {
+        order: -1;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 6%;
 }
+    .timeline {
+        width: 80vw;
+        margin-bottom: 0;
+    }
+    .timeline .checkpoint {
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .timeline .checkpoint::before {
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline .checkpoint div::before {
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Global adjustments */
+    header {
+        position: static; /* Le header n'est plus fixe */
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #000000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a{
+        font-size: 1rem;
+    }
+    #imgprofile{
+        width: 200px;
+        height: 200px;
+    }
+    .menu-link {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2rem; /* Réduction de la taille des H1 */
+    }
+
+    h2, h3, p {
+        font-size: 1rem; /* Réduction des autres tailles de texte */
+    }
+
+    section#home {
+        padding-top: 10%;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    #presentation {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 10px 0px 10px;
+    }
+
+    #social{
+        justify-content: center;
+    }
+
+    #formation{
+        height: auto;
+        padding-top: 10%;
+    }
+
+    section{
+        min-height: 0;
+    }
+
+
+    /* Ajustement des projets (cards) */
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .project-card {
+        display: flex;
+        flex-wrap: wrap;
+        width: 40%;
+        height: 40%;
+
+    }
+    
+  
+
+    .project-overlay h3 {
+        font-size: 1rem; /* Texte plus petit */
+    }
+
+    /* Formulaire */
+    .form-container {
+        padding: 20px;
+    }
+
+    input, textarea {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    input[type="submit"] {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding-bottom: 15%;
+    }
+
+    .neon-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+.form-container{
+    margin: 0;
+}
+
 @media screen and (max-width: 768px) {
+
+    #contact{
+        min-height: 0;
+    }
     #filter_cards_project{
         grid-template-columns: repeat(1, 1fr);
+    }
+    header {
+        position: static;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Encore plus petit pour les très petits écrans */
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr; /* Une carte par ligne pour les très petits écrans */
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form-container{
+        margin: 0;
     }
 }

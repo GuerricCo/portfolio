@@ -362,6 +362,7 @@ section#projets {
     gap: 10%;
 }
 
+
 .infos_tags{
     display: flex;
     flex-wrap: wrap;
@@ -567,7 +568,14 @@ footer h3 {
 
 
 @media screen and (max-width: 1150px) {
+
     /* Réduction de la largeur de la timeline */
+    #contact{
+        min-height: 0;
+    }
+    #filter_cards_project{
+        grid-template-columns: repeat(2, 1fr);
+    }
     section#contact{
         padding: 0;
     }
@@ -724,8 +732,18 @@ footer h3 {
         height: 30px;
     }
 }
+.form-container{
+    margin: 0;
+}
 
 @media screen and (max-width: 768px) {
+
+    #contact{
+        min-height: 0;
+    }
+    #filter_cards_project{
+        grid-template-columns: repeat(1, 1fr);
+    }
     header {
         position: static;
         padding: 10px;
@@ -749,5 +767,8 @@ footer h3 {
     .project-card {
         width: 100%;
         margin-bottom: 10px;
+    }
+    .form-container{
+        margin: 0;
     }
 }
