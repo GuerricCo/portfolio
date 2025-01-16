@@ -8,12 +8,12 @@ a {
     display: flex;
     justify-content: start;
     align-items: start;
-    flex-direction: column;
     max-width: 1420px;
     margin: 0 auto;
     margin-top: 25px;
     width: 90%;
     color: black;
+    flex-direction: row;
 }
 
 .projects {
