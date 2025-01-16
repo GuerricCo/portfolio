@@ -13,7 +13,6 @@ a {
     margin: 0 auto;
     margin-top: 25px;
     width: 90%;
-    background-color: white;
     color: black;
 }
 
@@ -64,76 +63,8 @@ a {
     padding: 10px;
 }
 
-#filter_cards li:hover .infos_cards::after {
-    bottom: 0;
-}
-
-.infos_cards > * {
-    position: relative;
-    z-index: 2;
-}
 
 
-#filter_cards li a {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    color: black;
-    text-decoration: none;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-#filter_cards .infos_tags {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 10px;
-    margin: 0;
-    text-align: end;
-    box-sizing: border-box;
-}
-
-#filter_cards .tags_cards {
-    margin: 0;
-}
-
-#filter_cards img {
-    width: 100%;
-    object-fit: cover;
-    aspect-ratio: 16/9;
-}
-
-#filter_cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    gap: 20px;
-    padding: 0;
-}
-
-#filter_cards li {
-    position: relative;
-    list-style-type: none;
-    border: 3px solid black;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-#filter_cards .infos_cards {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    border-top: 3px dashed #e02626;
-    position: relative;
-    overflow: hidden;
-}
 
 section {
     display: flex;
@@ -146,9 +77,64 @@ section {
     width: 90%;
 }
 
+/***card***/
+#filter_cards_project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    gap: 20px;
+    padding: 0;
+    margin: auto;
+}
+
+#filter_cards_project li {
+    position: relative;
+    list-style-type: none;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#filter_cards_project img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: transform 0.3s ease;
+}
+
+#filter_cards_project li:hover img {
+    transform: scale(1.1);
+}
+
+.infos_cards {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: top 0.4s ease;
+}
+
+#filter_cards_project li:hover .infos_cards {
+    top: 0;
+}
+
+.tags_cards {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+}
 
 
-/****Footer****/
 /****footer***/
 footer {
     padding-top: 50px;
@@ -234,29 +220,76 @@ header a.logo {
     font-weight: bold;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 80px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-green);
+    text-shadow: 
+        0 0 5px var(--color-green),
+        0 0 10px var(--color-green),
+        0 0 20px var(--color-green),
+        0 0 30px var(--color-green), 
+        0 0 40px var(--color-green), 
+        0 0 50px #000000,
+        0 0 75px #000000;
+}
+header nav a.active {
+    color: var(--color-green);
+    font-weight: bold;
+}
+
+
+nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 15px;
+}
+
 
 /****filtres*****/
-.Exploration_spatiale {
+.HTML {
     background-color: purple;
     color: white;
 }
 
-.Vie_sur_b2seomds {
+.JS {
     background-color: green;
     color: white;
 }
 
-.Enjeux_et_perspectives {
+.PHP {
     background-color: #f0e10e;
     color: black;
 }
 
-.Technologies_et_innovations {
-    background-color: #294dc1;
+.Maquettes {
+    background-color: #ff5733;
     color: white;
 }
 
-.Science_fiction_et_culture {
-    background-color: black;
+.Design {
+    background-color: #3371ff;
+    color: white;
+}
+
+.WordPress {
+    background-color: #33ffaf;
     color: white;
 }
