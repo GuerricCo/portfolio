@@ -731,6 +731,41 @@ footer h3 {
         width: 30px;
         height: 30px;
     }
+    .content h2 {
+        font-size: 0.8em;
+    }
+    .content h4 {
+        font-size: 0.6em;
+    }
+    .content p {
+        font-size: 0.4em;
+    }
+    .projects{
+        flex-direction: column;
+    }
+    #filter_card{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+
+    }
+    .tags_cards{
+        font-size: 0.4em;
+        padding: 5px;
+    }
+
+    #filter_manage{
+        width: 100%;
+    }
+    .custom-button, #input_filter_all{
+        min-width: none;
+        border: 15px double white;
+    }
+
+    .button-text, #input_filter_all {
+        padding: 8px;
+        font-size: 0.8em;
+    }
 }
 
 @media screen and (max-width: 768px) {
