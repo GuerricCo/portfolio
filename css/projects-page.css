@@ -136,14 +136,19 @@ section {
 #filter_cards li:hover .infos_cards {
     top: 0;
 }
-
+#filter_cards_project li:hover .infos_cards {
+    top: 0;
+}
 .tags_cards {
     padding: 5px 10px;
     border-radius: 5px;
     margin: 5px;
     font-size: 14px;
 }
-
+.infos_tags{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /****footer***/
 footer {
