@@ -130,6 +130,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         tag_cards.style.backgroundColor = "#f0e10e";
                         tag_cards.style.color = "black";
                         break;
+                    case "Maquettes":
+                        tag_cards.style.backgroundColor = "#ff5733";
+                        tag_cards.style.color = "white";
+                        break;
+                    case "Design":
+                        tag_cards.style.backgroundColor = "#3371ff";
+                        tag_cards.style.color = "white";
+                        break;
+                    case "WordPress":
+                        tag_cards.style.backgroundColor = "#33ffaf";
+                        tag_cards.style.color = "white";
+                        break;
                 }
 
                 infos_tags.appendChild(tag_cards);
