@@ -568,6 +568,18 @@ footer h3 {
 
 @media screen and (max-width: 1150px) {
     /* Réduction de la largeur de la timeline */
+    section#contact{
+        padding: 0;
+    }
+    .timeline p{
+        text-align: center;
+    }
+    img#imgprofile {
+        order: -1;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 6%;
+}
     .timeline {
         width: 80vw;
         margin-bottom: 0;
@@ -637,7 +649,7 @@ footer h3 {
     }
 
     section#home {
-        padding-top: 20%;
+        padding-top: 10%;
         flex-direction: column;
         text-align: center;
         justify-content: flex-start;

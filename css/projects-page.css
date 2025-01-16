@@ -149,7 +149,18 @@ section {
     display: flex;
     flex-wrap: wrap;
 }
-
+.content {
+    width: 90%;
+}
+.content h2 {
+    font-size: 1.5em;
+}
+.content h4 {
+    font-size: 1em;
+}
+.content p {
+    font-size: 0.9em;
+}
 /****footer***/
 footer {
     padding-top: 50px;
@@ -310,4 +321,16 @@ button{
 .WordPress {
     background-color: #33ffaf;
     color: white;
+}
+
+
+@media screen and (max-width: 1150px) {
+    #filter_cards_project{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 768px) {
+    #filter_cards_project{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
