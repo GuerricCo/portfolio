@@ -5,12 +5,12 @@ export const projets_pages = [
         "date": "2024-12-03",
         "tag": "HTML",
         "content": 
-        "<h2>Le Site XYZ : Une Révolution du Web</h2>\n" +
-        "<p>Le site XYZ a été conçu pour offrir une expérience utilisateur unique. Il se distingue par son design moderne et sa facilité d'utilisation, tout en offrant des fonctionnalités de pointe adaptées aux besoins des utilisateurs dans le secteur de la technologie.</p>\n" +
+        "<h2>Projet de partiel B1</h2>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +
         "<h3>Contexte</h3>\n" +
-        "<p>Le site XYZ a été créé dans le cadre d'un projet visant à résoudre les problèmes de navigation et de fonctionnalité des sites web existants dans le domaine des technologies. Il a été conçu pour être accessible sur tous les appareils et optimiser la vitesse de navigation.</p>\n" +
+        "<p>A My-Digital-School, lors du premier partiel de premiere année. Nous deviens choisir un lycée et refaire sa charte graphique, sa communication, et la refonte de leurs site web avec possibilité de le faire en wordpress ou en code pure.</p>\n" +
+        "<p classe='code'>A My-Digital-School, lors du premier partiel de premiere année. Nous deviens choisir un lycée et refaire sa charte graphique, sa communication, et la refonte de leurs site web avec possibilité de le faire en wordpress ou en code pure.</p>\n" +
         "</section>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +
