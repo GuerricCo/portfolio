@@ -178,16 +178,16 @@ article {
 /* Flexbox pour aligner le texte et le code sur la même ligne */
 .text-and-code {
     display: flex;
-    align-items: center;
     gap: 20px; /* Espace entre le texte et le code */
 }
 
 /* Style du code avec fond gris et padding */
 pre code {
-    background-color: #f4f4f4; /* Fond gris clair */
-    padding: 15px; /* Espacement autour du code */
-    border-radius: 8px; /* Bords arrondis */
-    width: 100%; /* Prend toute la largeur possible */
-    white-space: pre-wrap; /* Permet le retour à la ligne si nécessaire */
-    word-wrap: break-word; /* Évite que le code dépasse de la boîte */
+    padding: 250px;
+}
+pre {
+    FONT-WEIGHT: 300;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 30px;
 }
