@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 section {
@@ -104,12 +104,24 @@ nav ul li a:hover {
 
 /*****section a propos****/
 
-#imgprofile{
+#imgprofile {
     width: 500px;
     height: 500px;
     object-fit: cover;
-    border-radius: 99999px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--color-green), 
+                0 0 40px var(--color-green), 
+                0 0 60px var(--color-green);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+#imgprofile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--color-green), 
+                0 0 50px var(--color-green), 
+                0 0 75px var(--color-green);
+}
+
 
 section#home {
     display: flex;
@@ -253,8 +265,12 @@ section#home {
 
 /** section formation**/
 #formation{
-    height: 1800px;
+    height: 1900px;
     padding-top: 200px;
+}
+
+#formation li{
+    margin-bottom: 10px;
 }
 
 #formation h2{
@@ -286,10 +302,13 @@ section#home {
     position: relative;
 }
 
-.checkpoint div{
+.checkpoint .car{
     border:2px solid #888;
     border-radius: 1em;
     padding: 1.5em;
+    box-shadow: 0 0 20px var(--color-green), 
+                0 0 40px var(--color-green), 
+                0 0 60px var(--color-green);
 }
 
 .checkpoint p{
@@ -348,6 +367,26 @@ section#home {
     right: -0.5em;
 }
 
+.icones_logi {
+    display: flex; /* Aligne les images horizontalement */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    justify-content: center; /* Centrer les images horizontalement */
+    gap: 15px; /* Ajoute de l'espace entre les images */
+    margin-top: 20px; /* Ajoute un espace entre les icônes et le reste du contenu */
+}
+
+.icones_logi .icone {
+    width: 70px; /* Largeur des icônes */
+    height: 70px; /* Hauteur des icônes */
+    object-fit: contain; /* Garde les proportions des images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute des transitions pour des effets au survol */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
+.icones_logi .icone:hover {
+    transform: scale(1.2); /* Agrandit légèrement l'icône au survol */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre pour un effet 3D */
+}
 
 
 
@@ -380,6 +419,8 @@ section#projets {
     gap: 20px;
     padding: 0;
     margin: auto;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 #filter_cards_project li {
@@ -561,13 +602,12 @@ footer h3 {
     margin-top: 20px;
 }
 
-
-
-
-
-
-
 @media screen and (max-width: 1150px) {
+
+    .icones_logi .icone {
+        width: 50px; /* Largeur des icônes */
+        height: 50px; /* Hauteur des icônes */
+    }
 
     /* Réduction de la largeur de la timeline */
     #contact{
@@ -599,6 +639,9 @@ footer h3 {
         padding-right: 0;
         border: none;
     }
+    #home p{
+        margin-bottom: 8%;
+    }
     .timeline .checkpoint::before {
         width: 3px;
         height: 4em;
@@ -606,7 +649,7 @@ footer h3 {
         left: 50%;
         transform: translateX(-50%);
     }
-    .timeline .checkpoint div::before {
+    .timeline .checkpoint .car::before {
         top: -0.5em;
         left: 50%;
         transform: translateX(-50%);
@@ -676,7 +719,7 @@ footer h3 {
 
     #formation{
         height: auto;
-        padding-top: 10%;
+        padding-top: 20%;
     }
 
     section{

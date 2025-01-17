@@ -479,6 +479,7 @@ button{
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-bottom: 8%;
     }
     .custom-button, #input_filter_all{
         min-width: max-content;
