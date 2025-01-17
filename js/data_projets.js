@@ -60,7 +60,7 @@ export const projets_pages = [
 "<h3>Ce que j'ai appris</h3>\n" +
 "<div class='text-and-code'>\n" +
 "<p>Cela m'a permis de comprendre comment utiliser la méthode filter() pour filtrer des éléments d'un tableau en fonction de critères donnés, ici, rechercher un monstre dont le nom contient une chaîne de caractères saisie par l'utilisateur.</p>\n" +
-"<pre><code class='language-javascript'>\n" + 
+"<pre><code class='language-css'>\n" + 
 "const filteredMonsters = tableMonstre.filter(monstre =>\n" +
 "    monstre.nom.toLowerCase().includes(query)\n" +
 ");\n" + 
