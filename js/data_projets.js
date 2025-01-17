@@ -52,14 +52,14 @@ export const projets_pages = [
 "<div class='section-line'></div>\n" +
 "<section>\n" +
 "<h3>Contexte</h3>\n" +
-"<p>Le projet *Summonersdle* est un jeu de quiz inspiré du jeu mobile *Summoners War*, créé avec un ami. L'objectif du jeu est de deviner un personnage en utilisant des indices. À chaque tentative, le jeu fournit un retour sur les points communs entre le personnage proposé et celui à deviner, permettant au joueur d'affiner sa recherche.</p>\n" +
-"<p>Ce projet met en œuvre la programmation orientée objet (POO) pour gérer la logique du jeu, rendant le processus de développement plus structuré et modulaire.</p>\n" +
+"<p>Lors de mon second partiel en B1, j'ai été impliqué dans un projet simulant une agence spatiale dont le but est d'envoyer des humains habiter sur d'autres planètes. En tant que membre de l'équipe de développement, ma mission était de concevoir et de développer le site web de l'agence, avec un focus particulier sur la création d'un formulaire en PHP.</p>\n" +
 "</section>\n" +
 "<div class='section-line'></div>\n" +
 "<section>\n" +
 "<h3>Ce que j'ai appris</h3>\n" +
 "<div class='text-and-code'>\n" +
-"<p>Cela m'a permis de comprendre comment utiliser la méthode filter() pour filtrer des éléments d'un tableau en fonction de critères donnés, ici, rechercher un monstre dont le nom contient une chaîne de caractères saisie par l'utilisateur.</p>\n" +
+"<p>Ce projet m'a permis d'acquérir des compétences essentielles en gestion de bases de données, en particulier en PHP et MySQL. J'ai appris à créer une base de données, à y insérer des données et à les récupérer pour les afficher sur des pages dynamiques. En développant une page dédiée à l'affichage des informations stockées dans la base, j'ai approfondi ma compréhension des requêtes SQL et de l'interaction entre le front-end et le back-end.</p>\n" +
+"<p>J'ai également appris à créer un formulaire d'inscription et de connexion relié à la base de données, en veillant à assurer la sécurité des informations sensibles. Cela m'a permis de mieux comprendre les principes fondamentaux de la gestion des utilisateurs sur le web, notamment la validation des données et l'authentification.</p>\n" +
 "<pre><code class='language-css'>\n" + 
 "const filteredMonsters = tableMonstre.filter(monstre =>\n" +
 "    monstre.nom.toLowerCase().includes(query)\n" +
@@ -70,7 +70,7 @@ export const projets_pages = [
 "<div class='section-line'></div>\n" +
 "<section>\n" +
 "<h3>Résultat</h3>\n" +
-"<p>En activant le contenu, vous pouvez voir le rendu final. Commencez à taper un nom et des personnages vous seront proposés. Bon jeu !</p>\n" +
+"<p>En lançant la vidéo, vous pouvez voir le formulaire opérationnel en action, permettant aux utilisateurs de s'inscrire ou de se connecter à notre plateforme. Vous pourrez observer comment les données sont envoyées à la base de données et comment les utilisateurs sont authentifiés de manière sécurisée</p>\n" +
         "<div class='iframe-container'>\n" +
         "    <iframe id='result-iframe' src='../summonersdle/summoners.html' title='Site XYZ'></iframe>\n" +
         "    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
@@ -84,7 +84,7 @@ export const projets_pages = [
         "author": "Guerric COCHELIN",
         "date": "2024-12-03",
         "tag": ["PHP"],
-        "content": "<h2>Jeu de quiz Summoners wars</h2>\n" +
+        "content": "<h2>2 eme projet de Partiel B1</h2>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +
         "<h3>Contexte</h3>\n" +
@@ -96,11 +96,6 @@ export const projets_pages = [
         "<h3>Ce que j'ai appris</h3>\n" +
         "<div class='text-and-code'>\n" +
         "<p>Cela m'a permis de comprendre comment utiliser la méthode filter() pour filtrer des éléments d'un tableau en fonction de critères donnés, ici, rechercher un monstre dont le nom contient une chaîne de caractères saisie par l'utilisateur.</p>\n" +
-        "<pre><code class='language-css'>\n" + 
-        "const filteredMonsters = tableMonstre.filter(monstre =>\n" +
-        "    monstre.nom.toLowerCase().includes(query)\n" +
-        ");\n" + 
-        "</code></pre>\n" +
         "</div>\n" +
         "</section>\n" +
         "<div class='section-line'></div>\n" +
