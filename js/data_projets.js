@@ -112,7 +112,6 @@ export const projets_pages = [
         "        <source src='../mp4/galact-x.mp4' type='video/mp4'>\n" +
         "        Votre navigateur ne prend pas en charge la balise vidéo.\n" +
         "    </video>\n" +
-        "    <button id='activate-video' class='iframe-button'>Activer le contenu</button>\n" +
         "</div>\n" +
         "</section>\n",
         "slug": "galact-x",
