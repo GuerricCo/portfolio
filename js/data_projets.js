@@ -4,40 +4,40 @@ export const projets_pages = [
         "author": "Guerric COCHELIN",
         "date": "2024-12-03",
         "tag": "HTML",
-        "code": `
-#menu-image img {
-    width: 230px;
-    height: 176px;
-    border-radius: 20px;
-    object-fit: cover;
-    position: absolute;
-    z-index: 999;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-}`,
         "content": 
-        "<h2>Projet de partiel B1</h2>\n" +
-        "<div class='section-line'></div>\n" +
-        "<section>\n" +
-        "<h3>Contexte</h3>\n" +
-        "<p>Lors de ma première année à My-Digital-School, dans le cadre du premier partiel, nous avons reçu pour mission de choisir un lycée et de travailler sur plusieurs aspects de sa communication. Cela incluait la refonte complète de sa charte graphique, l’élaboration d’une nouvelle stratégie de communication, ainsi que la réalisation d’un site web moderne. Nous avions la liberté de choisir entre une implémentation via WordPress ou un développement entièrement codé à la main.</p>\n" +
-        "<p>Dans notre groupe, j’occupais le rôle de développeur. À partir d’une maquette conçue par un collègue, j’ai pris en charge la réalisation technique du site web en HTML et CSS.</p>\n" +
-        "</section>\n" +
-        "<div class='section-line'></div>\n" +
-        "<section>\n" +
-        "<h3>Ce que j'ai appris</h3>\n" +
-        "<p></p>\n" +
-        "</section>\n" +
-        "<div class='section-line'></div>\n" +
-        "<section>\n" +
-        "<h3>Résultat</h3>\n" +
-        "<p>Depuis son lancement, XYZ a vu une augmentation significative du nombre d'utilisateurs actifs et a reçu des retours très positifs concernant sa facilité d'utilisation et sa rapidité. Le site est devenu une référence dans son domaine.</p>\n" +
-        "<div class='iframe-container'>\n" +
-        "    <iframe id='result-iframe' src='../la-martiniere-monplaisir/page1.html' title='Site XYZ'></iframe>\n" +
-        "    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
-        "</div>\n" +
-        "</section>\n",
+"<h2>Projet de partiel B1</h2>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Contexte</h3>\n" +
+"<p>Lors de ma première année à My-Digital-School, dans le cadre du premier partiel, nous avons reçu pour mission de choisir un lycée et de travailler sur plusieurs aspects de sa communication. Cela incluait la refonte complète de sa charte graphique, l’élaboration d’une nouvelle stratégie de communication, ainsi que la réalisation d’un site web moderne. Nous avions la liberté de choisir entre une implémentation via WordPress ou un développement entièrement codé à la main.</p>\n" +
+"<p>Dans notre groupe, j’occupais le rôle de développeur. À partir d’une maquette conçue par un collègue, j’ai pris en charge la réalisation technique du site web en HTML et CSS.</p>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Ce que j'ai appris</h3>\n" +
+"<pre><code class='language-css'>\n" + 
+"#menu-image img {\n" +
+"    width: 230px;\n" +
+"    height: 176px;\n" +
+"    border-radius: 20px;\n" +
+"    object-fit: cover;\n" +
+"    position: absolute;\n" +
+"    z-index: 999;\n" +
+"    top: 30px;\n" +
+"    left: 50%;\n" +
+"    transform: translateX(-50%);\n" +
+"}</code></pre>\n" + 
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Résultat</h3>\n" +
+"<p>Depuis son lancement, XYZ a vu une augmentation significative du nombre d'utilisateurs actifs et a reçu des retours très positifs concernant sa facilité d'utilisation et sa rapidité. Le site est devenu une référence dans son domaine.</p>\n" +
+"<div class='iframe-container'>\n" +
+"    <iframe id='result-iframe' src='../la-martiniere-monplaisir/page1.html' title='Site XYZ'></iframe>\n" +
+"    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
+"</div>\n" +
+"</section>\n",
+
         "slug": "la-martiniere-monplaisir",
         "metaDescription": "Découvrez le voyage interplanétaire vers la planète b2seomds. Explorez les défis, les technologies nécessaires et les risques d'une mission spatiale fascinante."
     },
