@@ -16,6 +16,15 @@ const projets = [
         "title": "Summonersdle",
         "title2": "Projet personnel",
         "tags": ["HTML", "JS"],
+    },
+    {
+        "description": "Formulaire d'inscription php",
+        "url": "projets/galact-x",
+        "src": "img/galact-x.png",
+        "alt": "Galact-X",
+        "title": "Galact-X",
+        "title2": "Projet de Partiel B1",
+        "tags": ["PHP"],
     }
 ]
 
@@ -39,13 +48,13 @@ const projets_actu = [
         "tags": ["HTML", "JS"],
     },
     {
-        "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
-        "url": "projets/la-martiniere-monplaisir",
-        "src": "img/la_martiniere.png",
-        "alt": "La Martiniere Monplaisir",
-        "title": "La Martinière Monlaisir",
+        "description": "Formulaire d'inscription php",
+        "url": "projets/galact-x",
+        "src": "img/galact-x.png",
+        "alt": "Galact-X",
+        "title": "Galact-X",
         "title2": "Projet de Partiel B1",
-        "tags": ["HTML"],
+        "tags": ["PHP"],
     }
 ]
 

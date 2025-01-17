@@ -78,6 +78,46 @@ export const projets_pages = [
         "</section>\n",
         "slug": "summonersdle",
         "metaDescription": ""
+    },
+    {
+        "title": "Galact-X",
+        "author": "Guerric COCHELIN",
+        "date": "2024-12-03",
+        "tag": ["PHP"],
+        "content": "<h2>Jeu de quiz Summoners wars</h2>\n" +
+        "<div class='section-line'></div>\n" +
+        "<section>\n" +
+        "<h3>Contexte</h3>\n" +
+        "<p>Le projet *Summonersdle* est un jeu de quiz inspiré du jeu mobile *Summoners War*, créé avec un ami. L'objectif du jeu est de deviner un personnage en utilisant des indices. À chaque tentative, le jeu fournit un retour sur les points communs entre le personnage proposé et celui à deviner, permettant au joueur d'affiner sa recherche.</p>\n" +
+        "<p>Ce projet met en œuvre la programmation orientée objet (POO) pour gérer la logique du jeu, rendant le processus de développement plus structuré et modulaire.</p>\n" +
+        "</section>\n" +
+        "<div class='section-line'></div>\n" +
+        "<section>\n" +
+        "<h3>Ce que j'ai appris</h3>\n" +
+        "<div class='text-and-code'>\n" +
+        "<p>Cela m'a permis de comprendre comment utiliser la méthode filter() pour filtrer des éléments d'un tableau en fonction de critères donnés, ici, rechercher un monstre dont le nom contient une chaîne de caractères saisie par l'utilisateur.</p>\n" +
+        "<pre><code class='language-css'>\n" + 
+        "const filteredMonsters = tableMonstre.filter(monstre =>\n" +
+        "    monstre.nom.toLowerCase().includes(query)\n" +
+        ");\n" + 
+        "</code></pre>\n" +
+        "</div>\n" +
+        "</section>\n" +
+        "<div class='section-line'></div>\n" +
+        "<section>\n" +
+        "<h3>Résultat</h3>\n" +
+        "<p>En regardant la vidéo vous pouvez voir l'ensemble du site réalisé sur une semaine.</p>\n" +
+        "<div class='video-container'>\n" +
+        "    <video id='result-video' controls>\n" +
+        "        <source src='../mp4/galact-x.mp4' type='video/mp4'>\n" +
+        "        Votre navigateur ne prend pas en charge la balise vidéo.\n" +
+        "    </video>\n" +
+        "    <button id='activate-video' class='iframe-button'>Activer le contenu</button>\n" +
+        "</div>\n" +
+        "</section>\n",
+        "slug": "galact-x",
+        "metaDescription": ""
     }
+    
 ];
 
