@@ -191,3 +191,18 @@ pre {
     background-color: grey;
     border-radius: 30px;
 }
+
+
+@media screen and (max-width: 1150px) {
+    pre code {
+        padding:0px;
+    }
+    .text-and-code {
+        flex-direction: column;
+    }
+    .retour{
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {}
