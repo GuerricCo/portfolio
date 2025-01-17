@@ -1,6 +1,26 @@
 import { projets_pages } from './data_projets.js';
 
+function loadProject(slug) {
+    const project = projets_pages.find((proj) => proj.slug === slug);
 
+    if (project) {
+        document.getElementById('project-title').textContent = project.title;
+        document.getElementById('project-content').innerHTML = project.content;
+
+        // Vérifie si l'élément pour afficher le code CSS existe
+        const codeElement = document.getElementById('project-code');
+        if (codeElement) {
+            codeElement.textContent = project.code; // Utilise textContent pour éviter d'exécuter du HTML/CSS
+        }
+
+    } else {
+        console.error('Projet introuvable');
+    }
+}
+
+
+// Charger un projet avec le slug "la-martiniere-monplaisir"
+loadProject('la-martiniere-monplaisir');
 
 document.addEventListener("DOMContentLoaded", () => {
     const div_tag_projets = document.getElementById("project-meta");
