@@ -93,7 +93,7 @@ export const projets_pages = [
         "<div class='section-line'></div>\n" +
         "<section>\n" +
         "<h3>Ce que j'ai appris</h3>\n" +
-        "<div class='text-and-code'>\n" +
+        "<div>\n" +
         "<p>Ce projet m'a permis d'acquérir des compétences essentielles en gestion de bases de données, en particulier en PHP et MySQL. J'ai appris à créer une base de données, à y insérer des données et à les récupérer pour les afficher sur des pages dynamiques. En développant une page dédiée à l'affichage des informations stockées dans la base, j'ai approfondi ma compréhension des requêtes SQL et de l'interaction entre le front-end et le back-end.</p>\n" +
         "<p>J'ai également appris à créer un formulaire d'inscription et de connexion relié à la base de données, en veillant à assurer la sécurité des informations sensibles. Cela m'a permis de mieux comprendre les principes fondamentaux de la gestion des utilisateurs sur le web, notamment la validation des données et l'authentification.</p>\n" +
         "</div>\n" +
