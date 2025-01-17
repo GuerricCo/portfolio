@@ -1,5 +1,6 @@
 class Monstre {
-    constructor(famille, element, nom, type, effetRenfor, effetNocif, lead) {
+    constructor(img, famille, element, nom, type, effetRenfor, effetNocif, lead) {
+        this.img = img;
         this.famille = famille;
         this.element = element;
         this.nom = nom;
@@ -8,128 +9,155 @@ class Monstre {
         this.effetNocif = effetNocif;
         this.lead = lead;
     }
-
 }
 
 const tableMonstre = [
-
-
-    new Monstre("Anges jumeaux", "feu", "Karuel et Lanoah", "support", "augmente ATQ, immunité", "baisse def", "speed"),
-    new Monstre("Anges jumeaux", "vent", "Sadiel et Zeryah", "support", "immunité", "baisse def", "speed"),
-    new Monstre("Anges jumeaux", "lumière", "Miruel et Graciah", "support", "augmente ATQ, augmente DEF", "baisse ATK", "atk"),
-    new Monstre("Anges jumeaux", "ténèbre", "Jaduel et Aepiah", "support", "immunité", "baisse def", "DEF"),
-
+    new Monstre("img/Verad_SW.avif", "dragon", "eau", "verad", "defense", "aucun", "geler", "augmente les pv"),
+    new Monstre("img/Leo_SW.avif", "dragon", "feu", "ignir", "attaque", "deg constants, geler, aucun", "deg constants, geler", "augmente l'atk"),
+    new Monstre("img/Laika_SW.avif", "dragon", "eau", "pegase", "defense", "aucun", "geler", "augmente les pv"),
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
     random();
 
-    /***recup du html */
     const tagInput = document.getElementById("tagInput");
     const buttonValidate = document.getElementById("btnValidate");
-    const buttonStart = document.getElementById("btnStart")
+    const buttonStart = document.getElementById("btnStart");
+    const suggestionsContainer = document.getElementById("suggestions");
+    tagInput.addEventListener("input", function () {
+        const query = tagInput.value.toLowerCase();
+        if (query) {
+            const filteredMonsters = tableMonstre.filter(monstre =>
+                monstre.nom.toLowerCase().includes(query)
+            );
 
-    /** button */
+            displaySuggestions(filteredMonsters);
+        } else {
+            suggestionsContainer.style.display = "none";
+        }
+    });
+
+    function displaySuggestions(monsters) {
+        suggestionsContainer.innerHTML = "";
+        if (monsters.length > 0) {
+            suggestionsContainer.style.display = "block";
+            monsters.forEach(monstre => {
+                const suggestionItem = document.createElement("div");
+                suggestionItem.classList.add("suggestion-item");
+                suggestionItem.innerHTML = `
+                    <img src="${monstre.img}" alt="${monstre.nom}">
+                    <span>${monstre.nom}</span>
+                `;
+                suggestionItem.addEventListener("click", function () {
+                    tagInput.value = monstre.nom; // Remplir l'input avec le nom du monstre
+                    suggestionsContainer.style.display = "none"; // Cacher les suggestions
+                    recupSaisie(); // Récupérer la saisie du nom du monstre
+                    creationTableau(); // Créer le tableau avec le monstre trouvé
+                    verifierEtColorerLigne(monstreSelectionne); // Vérifier et colorer la ligne
+                    validate();
+                    emptyInput();
+
+                });
+                suggestionsContainer.appendChild(suggestionItem);
+            });
+        } else {
+            suggestionsContainer.style.display = "none";
+        }
+    }
+
+    function emptyInput() {
+        tagInput.value = "";  // Vide l'input
+        suggestionsContainer.style.display = "none"; // Cache les suggestions
+    }
+    
+
     buttonValidate.addEventListener("click", function () {
         recupSaisie();
-        creationTableau(); // Ajouter les informations du monstre au tableau
-        verifierEtColorerLigne(monstreSelectionne); // Vérifier et colorer les cellules par rapport à monstreSelectionne
+        creationTableau();
+        verifierEtColorerLigne(monstreSelectionne);
         validate();
+        emptyInput();
     });
 
     buttonStart.addEventListener("click", function () {
-        resetTableau(); // Réinitialiser le tableau avant de commencer
+        resetTableau();
         random();
-        buttonStart.style.display = 'none';
-        buttonValidate.style.display = 'inline-block';
-    })
-
-    /***function **/
+        buttonStart.style.display = "none";
+        buttonValidate.style.display = "inline-block";
+    });
 
     function random() {
         let nbrMonstre = Math.floor(Math.random() * tableMonstre.length);
         monstreSelectionne = tableMonstre[nbrMonstre];
         console.log(monstreSelectionne);
-        console.log(monstreSelectionne.nom)
     }
 
     function recupSaisie() {
         nameWritten = tagInput.value;
         console.log(nameWritten);
-        console.log()
     }
 
     function validate() {
         if (nameWritten.toLowerCase() === monstreSelectionne.nom.toLowerCase()) {
-            console.log("bravo");
-            buttonStart.style.display = 'inline-block';
-            buttonValidate.style.display = 'none';
+            console.log("Bravo !");
+            buttonStart.style.display = "inline-block";
+            buttonValidate.style.display = "none";
         } else {
-            console.log("tu as faux");
-            buttonStart.style.display = 'none';
-            buttonValidate.style.display = 'inline-block';
+            console.log("Tu as faux !");
+            buttonStart.style.display = "none";
+            buttonValidate.style.display = "inline-block";
         }
     }
 
     function creationTableau() {
-        // Chercher le monstre correspondant dans le tableau
-        const monstreTrouve = tableMonstre.find(monstre => monstre.nom.toLowerCase() === nameWritten.toLowerCase());
+        const monstreTrouve = tableMonstre.find(
+            (monstre) => monstre.nom.toLowerCase() === nameWritten.toLowerCase()
+        );
 
         if (monstreTrouve) {
-            console.log("Monstre trouvé !");
-
-            // Récupérer le corps du conteneur de monstres
             const monstreInfoBody = document.getElementById("monstreInfoBody");
 
-            // Vérifier si le monstre est déjà présent dans le tableau
-            const cellulesExistantes = monstreInfoBody.getElementsByClassName("monstreInfoCell");
-            for (let i = 0; i < cellulesExistantes.length; i += 7) { // 7 car il y a 7 cellules par ligne
-                if (cellulesExistantes[i].textContent.toLowerCase() === monstreTrouve.nom.toLowerCase()) {
-                    console.log("Monstre déjà présent !");
-                    return; // Sortir de la fonction si le monstre est déjà présent
-                }
+            const existe = Array.from(monstreInfoBody.getElementsByClassName("monstreInfoRow")).some((row) => {
+                return row.querySelector(".monstreInfoCell.background").style.backgroundImage.includes(monstreTrouve.img);
+            });
+
+            if (existe) {
+                console.log("Monstre déjà présent !");
+                return;
             }
 
-            // Créer une nouvelle ligne pour ce monstre
             const nouvelleRow = document.createElement("div");
-            nouvelleRow.className = "monstreInfoRow"; // Ajouter la classe pour le style
+            nouvelleRow.className = "monstreInfoRow";
 
-            // Créer les cellules et les remplir avec les informations du monstre
-            const cellNom = document.createElement("div");
-            const cellFamille = document.createElement("div");
-            const cellElement = document.createElement("div");
-            const cellType = document.createElement("div");
-            const cellEffetRenfor = document.createElement("div");
-            const cellEffetNocif = document.createElement("div");
-            const cellLead = document.createElement("div");
+            const proprieteMonstre = [
+                { key: "img", isImage: true },
+                { key: "famille", isImage: false },
+                { key: "element", isImage: false },
+                { key: "type", isImage: false },
+                { key: "effetRenfor", isImage: false },
+                { key: "effetNocif", isImage: false },
+                { key: "lead", isImage: false },
+            ];
 
-            cellNom.textContent = monstreTrouve.nom;
-            cellFamille.textContent = monstreTrouve.famille;
-            cellElement.textContent = monstreTrouve.element;
-            cellType.textContent = monstreTrouve.type;
-            cellEffetRenfor.textContent = monstreTrouve.effetRenfor;
-            cellEffetNocif.textContent = monstreTrouve.effetNocif;
-            cellLead.textContent = monstreTrouve.lead;
+            proprieteMonstre.forEach((prop) => {
+                const cell = document.createElement("div");
+                cell.className = "monstreInfoCell";
 
-            // Ajout de classe pour cell
-            cellNom.className = "monstreInfoCell";
-            cellFamille.className = "monstreInfoCell";
-            cellElement.className = "monstreInfoCell";
-            cellType.className = "monstreInfoCell";
-            cellEffetRenfor.className = "monstreInfoCell";
-            cellEffetNocif.className = "monstreInfoCell";
-            cellLead.className = "monstreInfoCell";
+                if (prop.isImage) {
+                    cell.classList.add("background");
+                    cell.style.backgroundImage = `url(${monstreTrouve[prop.key]})`;
 
-            // Ajouter les cellules à la nouvelle ligne
-            nouvelleRow.appendChild(cellNom);
-            nouvelleRow.appendChild(cellFamille);
-            nouvelleRow.appendChild(cellElement);
-            nouvelleRow.appendChild(cellType);
-            nouvelleRow.appendChild(cellEffetRenfor);
-            nouvelleRow.appendChild(cellEffetNocif);
-            nouvelleRow.appendChild(cellLead);
+                    const overlay = document.createElement("div");
+                    overlay.className = "overlay";
+                    overlay.textContent = monstreTrouve.nom;
+                    cell.appendChild(overlay);
+                } else {
+                    cell.textContent = monstreTrouve[prop.key];
+                }
 
-            // Ajouter la nouvelle ligne au corps du conteneur
+                nouvelleRow.appendChild(cell);
+            });
+
             monstreInfoBody.appendChild(nouvelleRow);
         } else {
             console.log("Le nom du monstre n'existe pas.");
@@ -138,66 +166,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function verifierEtColorerLigne(monstreCherche) {
         const lignesMonstre = document.getElementsByClassName("monstreInfoRow");
-
-        for (let i = 0; i < lignesMonstre.length; i++) {
-            const cellules = lignesMonstre[i].getElementsByClassName("monstreInfoCell");
-
-            // Comparer les informations de chaque cellule avec les propriétés du monstre sélectionné
-            // Nom
-            cellules[0].style.backgroundColor = (cellules[0].textContent.toLowerCase() === monstreCherche.nom.toLowerCase()) ? "green" : "red";
-
-            // Famille
-            cellules[1].style.backgroundColor = (cellules[1].textContent.toLowerCase() === monstreCherche.famille.toLowerCase()) ? "green" : "red";
-
-            // Élément
-            cellules[2].style.backgroundColor = (cellules[2].textContent.toLowerCase() === monstreCherche.element.toLowerCase()) ? "green" : "red";
-
-            // Type
-            cellules[3].style.backgroundColor = (cellules[3].textContent.toLowerCase() === monstreCherche.type.toLowerCase()) ? "green" : "red";
-
-            // Effet Renfor - comparer les effets individuellement
-            const effetsRenforCherche = monstreCherche.effetRenfor.toLowerCase().split(", ").map(effet => effet.trim());
-            const effetsRenforPropose = cellules[4].textContent.toLowerCase().split(", ").map(effet => effet.trim());
-
-            const effetsRenforCommuns = effetsRenforCherche.filter(effet => effetsRenforPropose.includes(effet));
-
-            if (effetsRenforCommuns.length === effetsRenforCherche.length && effetsRenforCherche.length === effetsRenforPropose.length) {
-                cellules[4].style.backgroundColor = "green"; // Correspondance exacte
-            } else if (effetsRenforCommuns.length > 0) {
-                cellules[4].style.backgroundColor = "orange"; // Correspondance partielle (certains effets sont bons)
-            } else {
-                cellules[4].style.backgroundColor = "red"; // Aucun effet ne correspond
-            }
-
-            // Effet Nocif - même logique que pour effetRenfor
-            const effetsNocifCherche = monstreCherche.effetNocif ? monstreCherche.effetNocif.toLowerCase().split(", ").map(effet => effet.trim()) : [];
-            const effetsNocifPropose = cellules[5].textContent ? cellules[5].textContent.toLowerCase().split(", ").map(effet => effet.trim()) : [];
-
-            const effetsNocifCommuns = effetsNocifCherche.filter(effet => effetsNocifPropose.includes(effet));
-
-            if (effetsNocifCommuns.length === effetsNocifCherche.length && effetsNocifCherche.length === effetsNocifPropose.length) {
-                cellules[5].style.backgroundColor = "green"; // Correspondance exacte
-            } else if (effetsNocifCommuns.length > 0) {
-                cellules[5].style.backgroundColor = "orange"; // Correspondance partielle
-            } else {
-                cellules[5].style.backgroundColor = "red"; // Aucun effet ne correspond
-            }
-
-            // Lead (s'il y a une comparaison pour cette propriété)
-            cellules[6].style.backgroundColor = (cellules[6].textContent.toLowerCase() === monstreCherche.lead?.toLowerCase()) ? "green" : "red";
-        }
+    
+        Array.from(lignesMonstre).forEach((ligne) => {
+            const cellules = ligne.getElementsByClassName("monstreInfoCell");
+    
+            const proprieteMonstre = [
+                monstreCherche.img,
+                monstreCherche.famille,
+                monstreCherche.element,
+                monstreCherche.type,
+                monstreCherche.effetRenfor,
+                monstreCherche.effetNocif,
+                monstreCherche.lead,
+            ];
+    
+            Array.from(cellules).forEach((cell, index) => {
+                if (index === 0) {
+                    // Comparer le background-image pour l'image
+                    const backgroundImage = cell.style.backgroundImage;
+                    if (backgroundImage.includes(monstreCherche.img)) {
+                        cell.style.backgroundColor = "green";
+                    } else {
+                        cell.style.backgroundColor = "red";
+                    }
+                } else if (index === 4 || index === 5) {
+                    // Gestion des colonnes effetRenfor et effetNocif (avec correspondance partielle ou totale)
+                    const effetsCherches = proprieteMonstre[index].toLowerCase().split(",").map(effet => effet.trim());
+                    const effetsCell = cell.textContent.toLowerCase().split(",").map(effet => effet.trim());
+    
+                    const effetsCommuns = effetsCherches.filter(effet => effetsCell.includes(effet));
+    
+                    if (effetsCommuns.length === effetsCherches.length && effetsCherches.length === effetsCell.length) {
+                        cell.style.backgroundColor = "green"; // Correspondance totale
+                    } else if (effetsCommuns.length > 0) {
+                        cell.style.backgroundColor = "orange"; // Correspondance partielle
+                    } else {
+                        cell.style.backgroundColor = "red"; // Pas de correspondance
+                    }
+                } else {
+                    // Comparer les autres propriétés textuelles
+                    if (cell.textContent.trim().toLowerCase() === proprieteMonstre[index].toLowerCase()) {
+                        cell.style.backgroundColor = "green";
+                    } else {
+                        cell.style.backgroundColor = "red";
+                    }
+                }
+            });
+        });
     }
-
-
-
-
-
-    // Fonction pour réinitialiser le tableau
+    
+    
     function resetTableau() {
         const monstreInfoBody = document.getElementById("monstreInfoBody");
-        // Vider le corps du tableau
-        monstreInfoBody.innerHTML = ""; // Cela supprime toutes les lignes
+        monstreInfoBody.innerHTML = "";
     }
-
-
-})
+});
