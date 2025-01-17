@@ -107,12 +107,10 @@ export const projets_pages = [
         "<section>\n" +
         "<h3>Résultat</h3>\n" +
         "<p>En regardant la vidéo vous pouvez voir l'ensemble du site réalisé sur une semaine.</p>\n" +
-        "<div class='video-container'>\n" +
         "    <video id='result-video' controls>\n" +
         "        <source src='../mp4/galact-x.mp4' type='video/mp4'>\n" +
         "        Votre navigateur ne prend pas en charge la balise vidéo.\n" +
         "    </video>\n" +
-        "</div>\n" +
         "</section>\n",
         "slug": "galact-x",
         "metaDescription": ""

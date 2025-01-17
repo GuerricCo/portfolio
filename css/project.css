@@ -193,6 +193,11 @@ pre {
     border-radius: 30px;
 }
 
+#result-video{
+    width: 100%;
+    margin: auto;
+}
+
 
 @media screen and (max-width: 1150px) {
     pre code {
