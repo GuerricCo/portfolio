@@ -160,3 +160,10 @@ article {
     width: 80%; /* Largeur de l'article */
     margin: 0 auto; /* Centrer l'article */
 }
+
+.retour{
+    color: var(--color-green);
+    text-decoration: none;
+    margin-left: 30px;
+    margin-top: 20px;
+}
