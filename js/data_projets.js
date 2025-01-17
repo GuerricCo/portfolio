@@ -3,7 +3,6 @@ export const projets_pages = [
         "title": "La Martiniere Monplaisir",
         "author": "Guerric COCHELIN",
         "date": "2024-12-03",
-        "tag": "HTML",
         "content": 
 "<h2>Projet de partiel B1</h2>\n" +
 "<div class='section-line'></div>\n" +
@@ -15,6 +14,8 @@ export const projets_pages = [
 "<div class='section-line'></div>\n" +
 "<section>\n" +
 "<h3>Ce que j'ai appris</h3>\n" +
+"<div class='text-and-code'>\n" +
+"<p>Depuis son lancement, XYZ a vu une augmentation significative du nombre d'utilisateurs actifs et a reçu des retours très positifs concernant sa facilité d'utilisation et sa rapidité. Le site est devenu une référence dans son domaine.</p>\n" +
 "<pre><code class='language-css'>\n" + 
 "#menu-image img {\n" +
 "    width: 230px;\n" +
@@ -27,6 +28,7 @@ export const projets_pages = [
 "    left: 50%;\n" +
 "    transform: translateX(-50%);\n" +
 "}</code></pre>\n" + 
+"</div>\n" +
 "</section>\n" +
 "<div class='section-line'></div>\n" +
 "<section>\n" +
