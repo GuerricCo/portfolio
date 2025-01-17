@@ -1,74 +1,90 @@
 import { projets_pages } from './data_projets.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const div_tag_projets = document.getElementById("project-meta");
-    const div_content = document.getElementById("project-content");
+    const divTagProjets = document.getElementById("project-meta");
+    const divContent = document.getElementById("project-content");
+
+    // Extraction du slug depuis l'URL
     const pathSegments = window.location.pathname.split("/");
-    const projetslug = pathSegments[pathSegments.length - 1];
-    const projets_page = projets_pages.find(a => a.slug === projetslug);
+    const projetSlug = pathSegments[pathSegments.length - 1].replace(".html", ""); // Supprime l'extension si elle existe
+    const projetPage = projets_pages.find(project => project.slug === projetSlug);
 
-    if (projets_page) {
-        // Mise à jour du titre et des métadonnées
-        document.title = projets_page.title;
-        document.getElementById("project-title-heading").innerText = projets_page.title;
+    if (projetPage) {
+        // Mise à jour du titre de la page
+        document.title = projetPage.title;
+        document.getElementById("project-title-heading").innerText = projetPage.title;
 
-        // Injection directe du contenu HTML depuis data_projets.js
-        div_content.innerHTML = projets_page.content;
+        // Injection du contenu du projet
+        divContent.innerHTML = projetPage.content;
 
-        // Gestionnaire d'événements pour le bouton activer l'iframe
-        const activateIframeButton = document.getElementById("activate-iframe");
-        if (activateIframeButton) {
-            activateIframeButton.addEventListener("click", () => {
-                const iframeWrapper = document.querySelector(".iframe-container");
-                iframeWrapper.classList.add("active"); // Ajoute la classe active pour activer l'iframe
+        // Affichage du code CSS si présent
+        if (projetPage.code) {
+            const codeElement = document.getElementById("project-code");
+            if (codeElement) {
+                codeElement.textContent = projetPage.code; // Utilisation de textContent pour éviter les failles XSS
+            }
+        }
+
+        // Gestion des tags
+        if (projetPage.tag) {
+            const tags = Array.isArray(projetPage.tag) ? projetPage.tag : [projetPage.tag];
+            divTagProjets.innerHTML = ''; // Vide le contenu précédent pour éviter les doublons
+            tags.forEach(tag => {
+                const tagElement = document.createElement("p");
+                tagElement.textContent = tag;
+                tagElement.className = "tag_cards";
+                tagElement.style.width = "fit-content";
+                tagElement.style.padding = "10px";
+                tagElement.style.borderRadius = "5px";
+
+                // Couleur en fonction du tag
+                switch (tag) {
+                    case "HTML":
+                        tagElement.style.backgroundColor = "purple";
+                        tagElement.style.color = "white";
+                        break;
+                    case "JS":
+                        tagElement.style.backgroundColor = "green";
+                        tagElement.style.color = "white";
+                        break;
+                    case "PHP":
+                        tagElement.style.backgroundColor = "#f0e10e";
+                        tagElement.style.color = "black";
+                        break;
+                    default:
+                        tagElement.style.backgroundColor = "gray";
+                        tagElement.style.color = "white";
+                        break;
+                }
+                divTagProjets.appendChild(tagElement);
             });
         }
 
         // Auteur et date
-        document.getElementById("project-author").innerText = projets_page.author;
-        document.getElementById("project-date").innerText = new Date(projets_page.date).toLocaleDateString();
+        document.getElementById("project-author").innerText = projetPage.author;
+        document.getElementById("project-date").innerText = new Date(projetPage.date).toLocaleDateString();
 
-        // Mise à jour de la meta description pour le SEO
+        // Meta description pour le SEO
         const metaDescriptionTag = document.querySelector('meta[name="description"]');
         if (metaDescriptionTag) {
-            metaDescriptionTag.setAttribute("content", projets_page.metaDescription);
+            metaDescriptionTag.setAttribute("content", projetPage.metaDescription);
         } else {
             const newMetaDescription = document.createElement("meta");
             newMetaDescription.setAttribute("name", "description");
-            newMetaDescription.setAttribute("content", projets_page.metaDescription);
+            newMetaDescription.setAttribute("content", projetPage.metaDescription);
             document.head.appendChild(newMetaDescription);
         }
 
-        // Ajout du tag dynamique
-        const tag_projets = document.createElement("p");
-        tag_projets.textContent = projets_page.tag;
-        tag_projets.className = "tag_cards";
-        tag_projets.style.width = "fit-content";
-        tag_projets.style.padding = "10px";
-        tag_projets.style.borderRadius = "5px";
-
-        // Application de la couleur en fonction du tag
-        switch (projets_page.tag) {
-            case "HTML":
-                tag_projets.style.backgroundColor = "purple";
-                tag_projets.style.color = "white";
-                break;
-            case "JS":
-                tag_projets.style.backgroundColor = "green";
-                tag_projets.style.color = "white";
-                break;
-            case "PHP":
-                tag_projets.style.backgroundColor = "#f0e10e";
-                tag_projets.style.color = "black";
-                break;
-        }
-
-        // Ajout du tag à un endroit spécifique et séparé
-        if (div_tag_projets) {
-            div_tag_projets.innerHTML = ''; // Vider le contenu de div_tag_projets pour éviter le mélange
-            div_tag_projets.appendChild(tag_projets); // Ajouter le tag au bon endroit
+        // Gestionnaire d'événements pour l'activation de l'iframe
+        const activateIframeButton = document.getElementById("activate-iframe");
+        if (activateIframeButton) {
+            activateIframeButton.addEventListener("click", () => {
+                const iframeWrapper = document.querySelector(".iframe-container");
+                iframeWrapper.classList.add("active"); // Ajoute une classe pour activer l'iframe
+            });
         }
     } else {
+        // Message si le projet n'est pas trouvé
         document.body.innerHTML = "<p>Projet non trouvé.</p>";
     }
 });

@@ -4,18 +4,30 @@ export const projets_pages = [
         "author": "Guerric COCHELIN",
         "date": "2024-12-03",
         "tag": "HTML",
+        "code": `
+#menu-image img {
+    width: 230px;
+    height: 176px;
+    border-radius: 20px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 999;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}`,
         "content": 
         "<h2>Projet de partiel B1</h2>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +
         "<h3>Contexte</h3>\n" +
-        "<p>A My-Digital-School, lors du premier partiel de premiere année. Nous deviens choisir un lycée et refaire sa charte graphique, sa communication, et la refonte de leurs site web avec possibilité de le faire en wordpress ou en code pure.</p>\n" +
-        "<p classe='code'>A My-Digital-School, lors du premier partiel de premiere année. Nous deviens choisir un lycée et refaire sa charte graphique, sa communication, et la refonte de leurs site web avec possibilité de le faire en wordpress ou en code pure.</p>\n" +
+        "<p>Lors de ma première année à My-Digital-School, dans le cadre du premier partiel, nous avons reçu pour mission de choisir un lycée et de travailler sur plusieurs aspects de sa communication. Cela incluait la refonte complète de sa charte graphique, l’élaboration d’une nouvelle stratégie de communication, ainsi que la réalisation d’un site web moderne. Nous avions la liberté de choisir entre une implémentation via WordPress ou un développement entièrement codé à la main.</p>\n" +
+        "<p>Dans notre groupe, j’occupais le rôle de développeur. À partir d’une maquette conçue par un collègue, j’ai pris en charge la réalisation technique du site web en HTML et CSS.</p>\n" +
         "</section>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +
-        "<h3>Mission</h3>\n" +
-        "<p>La mission de XYZ est de fournir aux utilisateurs une plateforme intuitive qui leur permette de trouver rapidement les informations qu'ils recherchent, tout en améliorant la performance globale du site grâce à des optimisations avancées de son infrastructure.</p>\n" +
+        "<h3>Ce que j'ai appris</h3>\n" +
+        "<p></p>\n" +
         "</section>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +
