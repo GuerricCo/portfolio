@@ -1,13 +1,13 @@
 /**text letter by letter */
 document.querySelectorAll('.letter-by-letter').forEach(function(element) {
-    var text = element.innerText;
-    element.innerHTML = '';
+  var text = element.innerText;
+  element.innerHTML = '';
 
-    text.split('').forEach(function(letter) {
-        var span = document.createElement('span');
-        span.innerText = letter;
-        element.appendChild(span);
-    });
+  text.split('').forEach(function(letter) {
+      var span = document.createElement('span');
+      span.innerText = letter;
+      element.appendChild(span);
+  });
 });
 
 
@@ -18,105 +18,228 @@ let isScrolling = false; // Pour éviter plusieurs défilements à la fois
 
 // Fonction pour vérifier si le mode responsive est activé
 function isResponsive() {
-  return window.innerWidth <= 767; // Tu peux ajuster cette valeur selon ton design
+return window.innerWidth <= 767; // Tu peux ajuster cette valeur selon ton design
+}
+
+// Initialisation des sections à opacité 0 sauf la première
+sections.forEach((section, index) => {
+section.style.opacity = index === 0 ? "1" : "0";
+section.style.transition = "opacity 0.5s ease";
+});
+
+// Fonction pour faire défiler jusqu'à une section avec effet de fondu
+function scrollToSection(index) {
+const currentSection = sections[currentSectionIndex];
+const targetSection = sections[index];
+
+// Réduit progressivement l'opacité de la section actuelle
+currentSection.style.opacity = "0";
+
+setTimeout(() => {
+  targetSection.scrollIntoView({ behavior: "instant" });
+
+  setTimeout(() => {
+    targetSection.style.opacity = "1"; // Apparition progressive de la nouvelle section
+    currentSectionIndex = index; // Mise à jour de l'index de la section actuelle
+    isScrolling = false; // Réactive le scrolling après l'animation
+  }, 500);
+}, 500);
+}
+
+
+
+
+
+// Sélection des sections et initialisation de l'index actuel
+
+
+// Fonction pour vérifier si le mode responsive est activé
+function isResponsive() {
+return window.innerWidth <= 767; // Tu peux ajuster cette valeur selon ton design
+}
+
+// Initialisation des sections à opacité 0 sauf la première
+sections.forEach((section, index) => {
+section.style.opacity = index === 0 ? "1" : "0";
+section.style.transition = "opacity 0.5s ease";
+});
+
+// Fonction pour faire défiler jusqu'à une section avec effet de fondu
+function scrollToSection(index) {
+const currentSection = sections[currentSectionIndex];
+const targetSection = sections[index];
+
+// Réduit progressivement l'opacité de la section actuelle
+currentSection.style.opacity = "0";
+
+setTimeout(() => {
+  targetSection.scrollIntoView({ behavior: "instant" });
+
+  setTimeout(() => {
+    targetSection.style.opacity = "1"; // Apparition progressive de la nouvelle section
+    currentSectionIndex = index; // Mise à jour de l'index de la section actuelle
+    isScrolling = false; // Réactive le scrolling après l'animation
+  }, 500);
+}, 500);
 }
 
 // Gestionnaire de l'événement de défilement
 window.addEventListener("wheel", (event) => {
-  if (isResponsive()) return; // Désactiver le défilement par section en mode responsive
-  if (isScrolling) return; // Empêche le traitement si un défilement est déjà en cours
+if (isResponsive() || isScrolling) return;
 
-  const direction = event.deltaY > 0 ? 1 : -1; // 1 pour descendre, -1 pour monter
-  const currentSection = sections[currentSectionIndex];
+const currentSection = sections[currentSectionIndex];
+const sectionRect = currentSection.getBoundingClientRect();
 
-  // Vérifie si on atteint les limites de la section
-  const sectionRect = currentSection.getBoundingClientRect();
-  const isAtBottom = direction === 1 && sectionRect.bottom <= window.innerHeight;
-  const isAtTop = direction === -1 && sectionRect.top >= 0;
+const atTop = sectionRect.top >= 0 && sectionRect.top <= window.innerHeight * 0.2; // La section est proche du haut
+const atBottom = sectionRect.bottom <= window.innerHeight && sectionRect.bottom >= window.innerHeight * 0.8; // La section est proche du bas
 
-  if ((direction === 1 && isAtBottom) || (direction === -1 && isAtTop)) {
-    const nextIndex = currentSectionIndex + direction;
-
-    if (nextIndex >= 0 && nextIndex < sections.length) {
-      isScrolling = true;
-      currentSectionIndex = nextIndex;
-      scrollToSection(currentSectionIndex);
-    }
-  }
-});
-
-// Fonction pour faire défiler jusqu'à une section
-function scrollToSection(index) {
-  const targetSection = sections[index];
-  targetSection.scrollIntoView({ behavior: "smooth" });
-
-  // Réinitialise le verrouillage après le défilement
-  setTimeout(() => {
-    isScrolling = false;
-  }, 100); // Ajustez le délai en fonction de la durée de l'animation
+// Si on est à la section supérieure et que l'utilisateur scroll vers le haut, ou à la section inférieure et qu'il scroll vers le bas
+if (atTop && event.deltaY < 0 && currentSectionIndex > 0) {
+  event.preventDefault();
+  scrollToSection(currentSectionIndex - 1); 
+  isScrolling = true; // Déplacer ici après l'appel de scrollToSection
+} else if (atBottom && event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+  event.preventDefault();
+  scrollToSection(currentSectionIndex + 1);
+  isScrolling = true; // Déplacer ici après l'appel de scrollToSection
+} else if (atBottom && currentSectionIndex === sections.length - 1) {
+  currentSection.style.opacity = "1";
 }
+
+}, { passive: false });
 
 // Réinitialise l'index de la section actuelle lors du redimensionnement de la fenêtre
 window.addEventListener("resize", () => {
-  if (isResponsive()) {
-    currentSectionIndex = 0; // Reset si nécessaire
-  }
+if (isResponsive()) {
+  currentSectionIndex = 0; // Réinitialise si nécessaire
+}
 });
+
+// Fonction pour afficher la section ciblée au clic sur le logo ou les liens du menu
+function handleNavigation(event) {
+event.preventDefault();
+const targetId = event.target.getAttribute("href").substring(1); // Récupère l'ID sans le #
+const targetSection = document.getElementById(targetId);
+
+if (targetSection) {
+  sections.forEach((section) => (section.style.opacity = "0")); // Masquer toutes les sections
+  targetSection.style.opacity = "1"; // Afficher la section cible
+  targetSection.scrollIntoView({ behavior: "smooth" });
+  currentSectionIndex = Array.from(sections).indexOf(targetSection);
+}
+}
+
+// Gestion des clics sur le logo et les liens du menu
+document.querySelectorAll("a[href^='#']").forEach((link) => {
+link.addEventListener("click", handleNavigation);
+});
+
+// Rendre la première section visible au chargement de la page
+window.addEventListener("DOMContentLoaded", () => {
+sections[0].style.opacity = "1";
+currentSectionIndex = 0;
+});
+
+
+
+
+
+
+
+
+
+
+
+// Réinitialise l'index de la section actuelle lors du redimensionnement de la fenêtre
+window.addEventListener("resize", () => {
+if (isResponsive()) {
+  currentSectionIndex = 0;
+}
+});
+
+// Fonction pour afficher la section ciblée au clic sur le logo ou les liens du menu
+function handleNavigation(event) {
+event.preventDefault();
+const targetId = event.target.getAttribute("href").substring(1); // Récupère l'ID sans le #
+const targetSection = document.getElementById(targetId);
+
+if (targetSection) {
+  sections.forEach((section) => (section.style.opacity = "0")); // Masquer toutes les sections
+  targetSection.style.opacity = "1"; // Afficher la section cible
+  targetSection.scrollIntoView({ behavior: "smooth" });
+  currentSectionIndex = Array.from(sections).indexOf(targetSection);
+}
+}
+
+// Gestion des clics sur le logo et les liens du menu
+document.querySelectorAll("a[href^='#']").forEach((link) => {
+link.addEventListener("click", handleNavigation);
+});
+
+// Rendre la première section visible au chargement de la page
+window.addEventListener("DOMContentLoaded", () => {
+sections[0].style.opacity = "1";
+currentSectionIndex = 0;
+})
+
+
 
 
 
 /****contact ***/
 function validateForm() {
-    let form = document.getElementById("contact-form");
-    let name = form.name.value;
-    let email = form.email.value;
-    let message = form.message.value;
-    let isValid = true;
+  let form = document.getElementById("contact-form");
+  let name = form.name.value;
+  let email = form.email.value;
+  let message = form.message.value;
+  let isValid = true;
 
-    if (name === "") {
-        showError("name", "Veuillez entrer votre nom");
-        isValid = false;
-    } else {
-        hideError("name");
-    }
+  if (name === "") {
+      showError("name", "Veuillez entrer votre nom");
+      isValid = false;
+  } else {
+      hideError("name");
+  }
 
-    if (email === "") {
-        showError("email", "Veuillez entrer une adresse email valide");
-        isValid = false;
-    } else if (!validateEmail(email)) {
-        showError("email", "L'adresse email n'est pas valide");
-        isValid = false;
-    } else {
-        hideError("email");
-    }
+  if (email === "") {
+      showError("email", "Veuillez entrer une adresse email valide");
+      isValid = false;
+  } else if (!validateEmail(email)) {
+      showError("email", "L'adresse email n'est pas valide");
+      isValid = false;
+  } else {
+      hideError("email");
+  }
 
-    if (message === "") {
-        showError("message", "Veuillez entrer votre message");
-        isValid = false;
-    } else {
-        hideError("message");
-    }
+  if (message === "") {
+      showError("message", "Veuillez entrer votre message");
+      isValid = false;
+  } else {
+      hideError("message");
+  }
 
-    return isValid;
+  return isValid;
 }
 
 
 function showError(field, message) {
-    let fieldGroup = document.querySelector(`#contact-form .form-group.${field}`);
-    let errorMessage = fieldGroup.querySelector('.error-message');
-    errorMessage.textContent = message;
-    errorMessage.style.display = 'block';
+  let fieldGroup = document.querySelector(`#contact-form .form-group.${field}`);
+  let errorMessage = fieldGroup.querySelector('.error-message');
+  errorMessage.textContent = message;
+  errorMessage.style.display = 'block';
 }
 
 
 function hideError(field) {
-    let fieldGroup = document.querySelector(`#contact-form .form-group.${field}`);
-    let errorMessage = fieldGroup.querySelector('.error-message');
-    errorMessage.style.display = 'none';
+  let fieldGroup = document.querySelector(`#contact-form .form-group.${field}`);
+  let errorMessage = fieldGroup.querySelector('.error-message');
+  errorMessage.style.display = 'none';
 }
 
 function validateEmail(email) {
-    let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return regex.test(email);
+  let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  return regex.test(email);
 }
+
+
 

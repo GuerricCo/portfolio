@@ -1,17 +1,67 @@
 /* Global styles */
 :root {
 --color-green: #16520f;
+--color-greenf: #26801c;
 }
 
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #000000;
 }
+/* Reset de styles de base */
+
+  
+ /* Conteneur des chiffres */
+/* Conteneur des chiffres */
+.number-container {
+    position: absolute; /* Positionné par rapport à la fenêtre */
+    top: 0;
+    right: 40%; /* Décale le conteneur à 10% de la largeur de l'écran */
+    transform: translateX(0); /* Le décalage horizontal est maintenant appliqué avec left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -3; /* Assure que c'est au-dessus du reste du contenu */
+  }
+  
+  /* Style des chiffres */
+  .number {
+    font-size: 2rem;
+    font-weight: 900; /* Épaissir les chiffres */
+    color: var(--color-green);
+    margin: 1px 0;
+    animation: scroll 6s linear infinite; /* Défilement continu */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.2), 0 0 20px rgba(0, 255, 0, 0.3); /* Effet flou */
+  }
+  
+  /* Animation pour faire défiler les chiffres du haut vers le bas */
+  @keyframes scroll {
+    0% {
+      transform: translateY(-2000%); /* Départ hors de l'écran par le haut */
+    }
+    100% {
+      transform: translateY(100vh); /* Déplacement vers le bas, hors de l'écran */
+    }
+  }
+  
+  
+  /* Ajout d'un délai à chaque chiffre pour que l'animation commence à des moments différents */
+
+  
+  /* Contenu principal (peut être n'importe quel autre contenu que tu as sur ta page) */
+  .content {
+    position: relative;
+    z-index: 1; /* Assure que le contenu reste en dessous */
+    padding: 20px;
+  }
+  
 
 section {
     width: 100%;
     min-height: 100vh;
-    background-color: #000000;
     color: white;
 }
 
@@ -194,9 +244,9 @@ section#home {
 .letter-by-letter {
     display: inline-block;
     white-space: nowrap;
-    color: var(--color-green);
+    color: var(--color-greenf);
     text-shadow: 
-        0 0 5px var(--color-green),
+        0 0 5px var(--color-greenf),
         0 0 10px #000000,
         0 0 20px #000000,
         0 0 30px #000000, 
