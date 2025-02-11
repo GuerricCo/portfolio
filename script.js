@@ -21,6 +21,7 @@ function isResponsive() {
 return window.innerWidth <= 767; // Tu peux ajuster cette valeur selon ton design
 }
 
+if (window.innerWidth >= 768) {
 // Initialisation des sections à opacité 0 sauf la première
 sections.forEach((section, index) => {
 section.style.opacity = index === 0 ? "1" : "0";
@@ -107,6 +108,7 @@ if (atTop && event.deltaY < 0 && currentSectionIndex > 0) {
 }
 
 }, { passive: false });
+}
 
 // Réinitialise l'index de la section actuelle lors du redimensionnement de la fenêtre
 window.addEventListener("resize", () => {
