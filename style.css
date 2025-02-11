@@ -9,107 +9,99 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #000000;
 }
-/* Reset de styles de base */
 
-  
- /* Conteneur des chiffres */
-/* Conteneur des chiffres */
 .number-container {
-    position: absolute; /* Positionné par rapport à la fenêtre */
+    position: absolute;
     top: 0;
-    right: 40%; /* Décale le conteneur à 10% de la largeur de l'écran */
-    transform: translateX(0); /* Le décalage horizontal est maintenant appliqué avec left */
+    right: 40%;
+    transform: translateX(0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    z-index: -3; /* Assure que c'est au-dessus du reste du contenu */
+    z-index: -3;
     position: fixed;
   }
 
   .number-container3 {
-    position: absolute; /* Positionné par rapport à la fenêtre */
+    position: absolute;
     top: 0;
-    right: 80%; /* Décale le conteneur à 10% de la largeur de l'écran */
-    transform: translateX(0); /* Le décalage horizontal est maintenant appliqué avec left */
+    right: 80%;
+    transform: translateX(0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    z-index: -3; /* Assure que c'est au-dessus du reste du contenu */
+    z-index: -3;
     position: fixed;
   }
 
   .number-container2 {
-    position: absolute; /* Positionné par rapport à la fenêtre */
+    position: absolute;
     top: 0;
-    right: 60%; /* Décale le conteneur à 10% de la largeur de l'écran */
-    transform: translateX(0); /* Le décalage horizontal est maintenant appliqué avec left */
+    right: 60%;
+    transform: translateX(0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    z-index: -3; /* Assure que c'est au-dessus du reste du contenu */
+    z-index: -3;
     position: fixed;
   }
   
   /* Style des chiffres */
   .number {
     font-size: 2rem;
-    font-weight: 900; /* Épaissir les chiffres */
+    font-weight: 900;
     color: var(--color-green);
     margin: 1px 0;
-    animation: scroll 8s linear infinite; /* Défilement continu */
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3); /* Effet flou */
+    animation: scroll 8s linear infinite;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3);
   }
 
   .number3 {
     font-size: 2rem;
-    font-weight: 900; /* Épaissir les chiffres */
+    font-weight: 900;
     color: var(--color-green);
     margin: 1px 0;
-    animation: scroll 10s linear infinite; /* Défilement continu */
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3); /* Effet flou */
+    animation: scroll 10s linear infinite;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3);
   }
 
   .number2 {
     font-size: 1rem;
-    font-weight: 900; /* Épaissir les chiffres */
+    font-weight: 900;
     color: var(--color-green);
     margin: 1px 0;
-    animation: scroll2 6s linear infinite; /* Défilement continu */
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3); /* Effet flou */
+    animation: scroll2 6s linear infinite;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3);
   }
   
-  /* Animation pour faire défiler les chiffres du haut vers le bas */
   @keyframes scroll {
     0% {
-      transform: translateY(-3000%); /* Départ hors de l'écran par le haut */
+      transform: translateY(-3000%);
     }
     100% {
-      transform: translateY(100vh); /* Déplacement vers le bas, hors de l'écran */
+      transform: translateY(100vh);
     }
   }
   
   @keyframes scroll2 {
     0% {
-      transform: translateY(-4000%); /* Départ hors de l'écran par le haut */
+      transform: translateY(-4000%);
     }
     100% {
-      transform: translateY(100vh); /* Déplacement vers le bas, hors de l'écran */
+      transform: translateY(100vh);
     }
   }
-  
-  /* Ajout d'un délai à chaque chiffre pour que l'animation commence à des moments différents */
 
   
-  /* Contenu principal (peut être n'importe quel autre contenu que tu as sur ta page) */
   .content {
     position: relative;
-    z-index: 1; /* Assure que le contenu reste en dessous */
+    z-index: 1;
     padding: 20px;
   }
   
@@ -165,12 +157,12 @@ header a.logo {
 
 .menu-link {
     text-decoration: none;
-    color: white; /* Couleur par défaut */
+    color: white;
     transition: color 0.3s ease;
 }
 
 .menu-link.active {
-    color: var(--color-green); /* Couleur pour le lien actif */
+    color: var(--color-green);
     font-weight: bold;
 }
 
@@ -473,24 +465,24 @@ section#home {
 }
 
 .icones_logi {
-    display: flex; /* Aligne les images horizontalement */
-    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-    justify-content: center; /* Centrer les images horizontalement */
-    gap: 15px; /* Ajoute de l'espace entre les images */
-    margin-top: 20px; /* Ajoute un espace entre les icônes et le reste du contenu */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .icones_logi .icone {
-    width: 70px; /* Largeur des icônes */
-    height: 70px; /* Hauteur des icônes */
-    object-fit: contain; /* Garde les proportions des images */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute des transitions pour des effets au survol */
-    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .icones_logi .icone:hover {
-    transform: scale(1.2); /* Agrandit légèrement l'icône au survol */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ajoute une ombre pour un effet 3D */
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -710,8 +702,8 @@ footer h3 {
 @media screen and (max-width: 1150px) {
 
     .icones_logi .icone {
-        width: 50px; /* Largeur des icônes */
-        height: 50px; /* Hauteur des icônes */
+        width: 50px;
+        height: 50px;
     }
 
     /* Réduction de la largeur de la timeline */
@@ -762,7 +754,7 @@ footer h3 {
 
     /* Global adjustments */
     header {
-        position: static; /* Le header n'est plus fixe */
+        position: static;
         padding: 20px;
         flex-direction: column;
         align-items: center;
@@ -797,11 +789,11 @@ footer h3 {
     }
 
     h1 {
-        font-size: 2rem; /* Réduction de la taille des H1 */
+        font-size: 2rem;
     }
 
     h2, h3, p {
-        font-size: 1rem; /* Réduction des autres tailles de texte */
+        font-size: 1rem;
     }
 
     section#home {
@@ -846,7 +838,7 @@ footer h3 {
   
 
     .project-overlay h3 {
-        font-size: 1rem; /* Texte plus petit */
+        font-size: 1rem;
     }
 
     /* Formulaire */
@@ -906,7 +898,7 @@ footer h3 {
     }
 
     h1 {
-        font-size: 1.8rem; /* Encore plus petit pour les très petits écrans */
+        font-size: 1.8rem;
     }
 
     

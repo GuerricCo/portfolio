@@ -47,35 +47,35 @@ form{
 
 .monstreInfoHeader, .monstreInfoRow {
     display: flex;
-    font-weight: bold; /* Gras pour l'en-tête */
+    font-weight: bold;
     justify-content: center;
 }
 
 .monstreInfoRow .monstreInfoCell {
-    border: 1px solid #ccc; /* Ajouter une bordure autour de chaque cellule */
-    padding: 8px; /* Ajouter du padding pour l'espace intérieur */
-    margin: 5px; /* Ajouter un espacement entre les cellules */
-    text-align: center; /* Centrer le texte dans la cellule */
-    background-color: #f9f9f9; /* Couleur de fond pour chaque cellule */
-    border-radius: 5px; /* Coins arrondis */
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
 }
 .monstreInfoCell {
-    border: 1px solid #ccc; /* Ajouter une bordure autour de chaque cellule */
-    padding: 8px; /* Ajouter du padding pour l'espace intérieur */
-    margin: 5px; /* Ajouter un espacement entre les cellules */
-    text-align: center; /* Centrer le texte dans la cellule */
-    background-color: #f9f9f9; /* Couleur de fond pour chaque cellule */
-    border-radius: 5px; /* Coins arrondis */
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
 }
 
 
 
 .monstreInfoCell {
-    padding: 8px; /* Espacement à l'intérieur des cellules */
-    text-align: center; /* Centre le texte */
-    position: relative; /* Nécessaire pour positionner le texte */
-    width: 150px; /* Largeur de chaque cellule */
-    height: 150px; /* Hauteur de chaque cellule */
+    padding: 8px;
+    text-align: center;
+    position: relative;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,7 +86,7 @@ form{
 
 
 .monstreInfoCell.background {
-    background-size: cover; /* L'image couvre toute la cellule */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -97,15 +97,15 @@ form{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Couche semi-transparente */
-    opacity: 0; /* Initialement masqué */
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 16px;
     font-weight: bold;
-    transition: opacity 0.3s ease; /* Animation pour l'effet de survol */
+    transition: opacity 0.3s ease;
 }
 
 .monstreInfoCell:hover .overlay {
