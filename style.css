@@ -25,6 +25,35 @@ body {
     height: 100vh;
     overflow: hidden;
     z-index: -3; /* Assure que c'est au-dessus du reste du contenu */
+    position: fixed;
+  }
+
+  .number-container3 {
+    position: absolute; /* Positionné par rapport à la fenêtre */
+    top: 0;
+    right: 80%; /* Décale le conteneur à 10% de la largeur de l'écran */
+    transform: translateX(0); /* Le décalage horizontal est maintenant appliqué avec left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -3; /* Assure que c'est au-dessus du reste du contenu */
+    position: fixed;
+  }
+
+  .number-container2 {
+    position: absolute; /* Positionné par rapport à la fenêtre */
+    top: 0;
+    right: 60%; /* Décale le conteneur à 10% de la largeur de l'écran */
+    transform: translateX(0); /* Le décalage horizontal est maintenant appliqué avec left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -3; /* Assure que c'est au-dessus du reste du contenu */
+    position: fixed;
   }
   
   /* Style des chiffres */
@@ -33,20 +62,46 @@ body {
     font-weight: 900; /* Épaissir les chiffres */
     color: var(--color-green);
     margin: 1px 0;
-    animation: scroll 6s linear infinite; /* Défilement continu */
+    animation: scroll 8s linear infinite; /* Défilement continu */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3); /* Effet flou */
+  }
+
+  .number3 {
+    font-size: 2rem;
+    font-weight: 900; /* Épaissir les chiffres */
+    color: var(--color-green);
+    margin: 1px 0;
+    animation: scroll 10s linear infinite; /* Défilement continu */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3); /* Effet flou */
+  }
+
+  .number2 {
+    font-size: 1rem;
+    font-weight: 900; /* Épaissir les chiffres */
+    color: var(--color-green);
+    margin: 1px 0;
+    animation: scroll2 6s linear infinite; /* Défilement continu */
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.2), 0 0 5px rgba(0, 255, 0, 0.3); /* Effet flou */
   }
   
   /* Animation pour faire défiler les chiffres du haut vers le bas */
   @keyframes scroll {
     0% {
-      transform: translateY(-2000%); /* Départ hors de l'écran par le haut */
+      transform: translateY(-3000%); /* Départ hors de l'écran par le haut */
     }
     100% {
       transform: translateY(100vh); /* Déplacement vers le bas, hors de l'écran */
     }
   }
   
+  @keyframes scroll2 {
+    0% {
+      transform: translateY(-4000%); /* Départ hors de l'écran par le haut */
+    }
+    100% {
+      transform: translateY(100vh); /* Déplacement vers le bas, hors de l'écran */
+    }
+  }
   
   /* Ajout d'un délai à chaque chiffre pour que l'animation commence à des moments différents */
 
@@ -823,6 +878,12 @@ footer h3 {
 
 @media screen and (max-width: 768px) {
     .number-container {
+        display: none;
+      }
+    .number-container2 {
+        display: none;
+      }
+    .number-container3 {
         display: none;
       }
 
