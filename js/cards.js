@@ -30,7 +30,7 @@ const projets = [
 
 const projets_actu = [
     {
-        "description": "Proposition de refonte du site web du lycée La Martiniere Monplaisir",
+        "description": "Refonte du site web d'un lycée",
         "url": "projets/la-martiniere-monplaisir",
         "src": "img/la_martiniere.png",
         "alt": "La Martiniere Monplaisir",

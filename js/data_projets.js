@@ -8,7 +8,7 @@ export const projets_pages = [
 "<div class='section-line'></div>\n" +
 "<section>\n" +
 "<h3>Contexte</h3>\n" +
-"<p>Lors de ma première année à My-Digital-School, dans le cadre du premier partiel sur une semaine, nous avons reçu pour mission de choisir un lycée et de travailler sur plusieurs aspects de sa communication. Cela incluait la refonte complète de sa charte graphique, l’élaboration d’une nouvelle stratégie de communication, ainsi que la réalisation d’un site web moderne. Nous avions la liberté de choisir entre une implémentation via WordPress ou un développement entièrement codé à la main.</p>\n" +
+"<p>Lors de ma première année à My-Digital-School, nous avons eu une semaine pour repenser la communication d’un lycée : refonte de la charte graphique, nouvelle stratégie et création d’un site web, sous WordPress ou en code pur.</p>\n" +
 "<p>Dans notre groupe, j’occupais le rôle de développeur. À partir d’une maquette conçue par un collègue, j’ai pris en charge la réalisation technique du site web en HTML et CSS.</p>\n" +
 "</section>\n" +
 "<div class='section-line'></div>\n" +
