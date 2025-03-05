@@ -126,13 +126,8 @@ export const projets_pages = [
 "<div class='section-line'></div>\n" +
 "<section>\n" +
 "<h3>Ce que j'ai appris</h3>\n" +
-"<div class='text-and-code'>\n" +
+"<div>\n" +
 "<p>Ce projet m'a permis de découvrir et d'explorer de manière pratique la manière dont les APIs fonctionnent. Grâce à cette expérience, j'ai acquis une meilleure compréhension des concepts tels que les requêtes HTTP, la gestion des réponses JSON, et la manière de manipuler les données pour les afficher dynamiquement sur une page web.</p>\n" +
-"<pre><code class='language-css'>\n" + 
-"const filteredMonsters = tableMonstre.filter(monstre =>\n" +
-"    monstre.nom.toLowerCase().includes(query)\n" +
-");\n" + 
-"</code></pre>\n"+
 "</div>\n" +
 "</section>\n" +
 "<div class='section-line'></div>\n" +
