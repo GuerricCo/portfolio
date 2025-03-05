@@ -32,7 +32,7 @@ const projets = [
         "src": "img/pokedex.png",
         "alt": "Pokedex",
         "title": "Pokedex",
-        "title2": "Découverte API",
+        "title2": "Decouverte API",
         "tags": ["HTML", "JS"],
     }
 ]
