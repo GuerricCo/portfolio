@@ -1,47 +1,5 @@
 export const projets_pages = [
-    {
-        "title": "La Martiniere Monplaisir",
-        "author": "Guerric COCHELIN",
-        "date": "2024-12-03",
-        "content": 
-"<h2>Projet de partiel B1</h2>\n" +
-"<div class='section-line'></div>\n" +
-"<section>\n" +
-"<h3>Contexte</h3>\n" +
-"<p>Lors de ma première année à My-Digital-School, nous avons eu une semaine pour repenser la communication d’un lycée : refonte de la charte graphique, nouvelle stratégie et création d’un site web, sous WordPress ou en code pur.</p>\n" +
-"<p>Dans notre groupe, j’occupais le rôle de développeur. À partir d’une maquette conçue par un collègue, j’ai pris en charge la réalisation technique du site web en HTML et CSS.</p>\n" +
-"</section>\n" +
-"<div class='section-line'></div>\n" +
-"<section>\n" +
-"<h3>Ce que j'ai appris</h3>\n" +
-"<div class='text-and-code'>\n" +
-"<p>Dans ce projet, j'ai appris à utiliser la propriété CSS <strong>z-index</strong> en combinaison avec <strong>position: absolute;</strong> pour gérer la superposition d'éléments. Par exemple, dans le header du site, un logo devait être positionné en plein milieu tout en restant au-dessus d'autres éléments comme des bandes de couleur ou des ronds décoratifs. Grâce à <code>position: absolute;</code>, j'ai pu placer le logo exactement où je voulais sur la page, tandis que <code>z-index</code> m'a permis de contrôler l'ordre d'affichage des éléments, en veillant à ce que le logo soit toujours visible, même si d'autres éléments se superposaient sous lui.</p>\n" +
-"<pre><code class='language-css'>\n" + 
-"#menu-image img {\n" +
-"    width: 230px;\n" +
-"    height: 176px;\n" +
-"    border-radius: 20px;\n" +
-"    object-fit: cover;\n" +
-"    position: absolute;\n" +
-"    z-index: 999;\n" +
-"    top: 30px;\n" +
-"    left: 50%;\n" +
-"    transform: translateX(-50%);\n" +
-"}</code></pre>\n" + 
-"</div>\n" +
-"</section>\n" +
-"<div class='section-line'></div>\n" +
-"<section>\n" +
-"<h3>Résultat</h3>\n" +
-"<p>En activant le contenu, vous pouvez voir le rendu final. Il y a trois pages accessibles : la page Lycée, Formation et Vie scolaire.</p>\n" +
-"<div class='iframe-container'>\n" +
-"    <iframe id='result-iframe' src='../la-martiniere-monplaisir/page1.html' title='Site XYZ'></iframe>\n" +
-"    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
-"</div>\n" +
-"</section>\n",
-        "slug": "pokedex",
-        "metaDescription": ""
-    },
+    
     {
         "title": "Summonersdle",
         "author": "Guerric COCHELIN",
