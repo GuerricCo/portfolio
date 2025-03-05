@@ -27,12 +27,12 @@ const projets = [
         "tags": ["PHP"],
     },
     {
-        "description": "Utilisation d'une API",
-        "url": "projets/pokedex",
-        "src": "img/pokedex.png",
-        "alt": "Pokedex",
-        "title": "Pokedex",
-        "title2": "Decouverte API",
+        "description": "Developpement d'un jeu sur summoners wars",
+        "url": "projets/summonersdle",
+        "src": "img/summonersdle.png",
+        "alt": "Summonersdle",
+        "title": "Summonersdle",
+        "title2": "Projet personnel",
         "tags": ["HTML", "JS"],
     }
 ]
