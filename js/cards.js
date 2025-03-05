@@ -64,15 +64,6 @@ const projets_actu = [
         "title": "Galact-X",
         "title2": "Projet de Partiel B1",
         "tags": ["PHP"],
-    },
-    {
-        "description": "Utilisation d'une API",
-        "url": "projets/pokedex",
-        "src": "img/pokedex.png",
-        "alt": "Pokedex",
-        "title": "Pokedex",
-        "title2": "Decouverte API",
-        "tags": ["HTML", "JS"],
     }
 ]
 

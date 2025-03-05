@@ -141,11 +141,11 @@ export const projets_pages = [
 "<h3>Résultat</h3>\n" +
 "<p>En activant le contenu, vous pouvez voir le rendu final. Commencez à taper un nom et des pokemons vous seront proposés.</p>\n" +
         "<div class='iframe-container'>\n" +
-        "    <iframe id='result-iframe' src='../pokedex/pokedex.html' title='Site XYZ'></iframe>\n" +
+        "    <iframe id='result-iframe' src='../pokedex/poke.html' title='Site XYZ'></iframe>\n" +
         "    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
         "</div>\n" +
         "</section>\n",
-        "slug": "pokedex",
+        "slug": "poke",
         "metaDescription": ""
     }
     
