@@ -4,7 +4,7 @@ const projets = [
         "url": "projets/la-martiniere-monplaisir",
         "src": "img/la_martiniere.png",
         "alt": "La Martiniere Monplaisir",
-        "title": "La Martinière Monlaisir",
+        "title": "La Martinière Monplaisir",
         "title2": "Projet de Partiel B1",
         "tags": ["HTML"],
     },
@@ -25,6 +25,15 @@ const projets = [
         "title": "Galact-X",
         "title2": "Projet de Partiel B1",
         "tags": ["PHP"],
+    },
+    {
+        "description": "Utilisation d'une API",
+        "url": "projets/pokedex",
+        "src": "img/pokedex.png",
+        "alt": "Pokedex",
+        "title": "Pokedex",
+        "title2": "Découverte API",
+        "tags": ["HTML", "JS"],
     }
 ]
 

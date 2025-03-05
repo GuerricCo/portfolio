@@ -109,6 +109,44 @@ export const projets_pages = [
         "</section>\n",
         "slug": "galact-x",
         "metaDescription": ""
+    },
+    ,
+    {
+        "title": "Pokedex",
+        "author": "Guerric COCHELIN",
+        "date": "2025-03-05",
+        "tag": ["HTML", "JS"],
+        "content": 
+        "<h2>Utilisation d'une API pokemon</h2>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Contexte</h3>\n" +
+"<p>J'ai voulu créer un Pokédex dynamique en utilisant une API pour récupérer des données sur les Pokémon.</p>\n" +
+"<p>L'objectif de ce projet était de me familiariser avec les API.</p>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Ce que j'ai appris</h3>\n" +
+"<div class='text-and-code'>\n" +
+"<p>Ce projet m'a permis de découvrir et d'explorer de manière pratique la manière dont les APIs fonctionnent. Grâce à cette expérience, j'ai acquis une meilleure compréhension des concepts tels que les requêtes HTTP, la gestion des réponses JSON, et la manière de manipuler les données pour les afficher dynamiquement sur une page web.</p>\n" +
+"<pre><code class='language-css'>\n" + 
+"const filteredMonsters = tableMonstre.filter(monstre =>\n" +
+"    monstre.nom.toLowerCase().includes(query)\n" +
+");\n" + 
+"</code></pre>\n"+
+"</div>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Résultat</h3>\n" +
+"<p>En activant le contenu, vous pouvez voir le rendu final. Commencez à taper un nom et des pokemons vous seront proposés.</p>\n" +
+        "<div class='iframe-container'>\n" +
+        "    <iframe id='result-iframe' src='../pokedex/pokedex.html' title='Site XYZ'></iframe>\n" +
+        "    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
+        "</div>\n" +
+        "</section>\n",
+        "slug": "pokedex",
+        "metaDescription": ""
     }
     
 ];
