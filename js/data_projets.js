@@ -110,7 +110,6 @@ export const projets_pages = [
         "slug": "galact-x",
         "metaDescription": ""
     },
-    ,
     {
         "title": "Pokedex",
         "author": "Guerric COCHELIN",
