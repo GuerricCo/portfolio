@@ -39,7 +39,7 @@ export const projets_pages = [
 "    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
 "</div>\n" +
 "</section>\n",
-        "slug": "pokedex",
+        "slug": "la-martiniere-monplaisir",
         "metaDescription": ""
     },
     {
