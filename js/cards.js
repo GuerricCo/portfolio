@@ -28,7 +28,7 @@ const projets = [
     },
     {
         "description": "Utilisation d'une API",
-        "url": "portfolio/projets/pokedex",
+        "url": "projets/pokedex",
         "src": "img/pokedex.png",
         "alt": "Pokedex",
         "title": "Pokedex",
