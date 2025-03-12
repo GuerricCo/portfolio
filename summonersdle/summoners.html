@@ -9,15 +9,15 @@
 </head>
 
 <body>
+    <div class="container">
     <h1>Summoners Wars</h1>
-    <form>
-        <div id="mot"> Tenez vous pret ça va barder les amies</div>
-        <input type="text" id="tagInput" placeholder="Tapez un nom de monstre...">
-<div id="suggestions" class="suggestions-container"></div>
-
+        <div class="search-box">
+            <input type="text" id="tagInput" placeholder="Tapez un nom de monstre...">
+            <ul id="suggestions" class="hidden"></ul>
+        </div>
         <input type="button" id="btnValidate" value="valider">
         <input type="button" id="btnStart" value="commencer">
-    </form>
+    </div>
 
     <div id="monstreInfoContainer">
             <div class="monstreInfoCell">Nom</div>
@@ -32,6 +32,7 @@
             <!-- Les nouvelles lignes seront ajoutées ici -->
         </div>
     </div>
+
     
 
     <script src="scriptPrincipal.js"></script>
