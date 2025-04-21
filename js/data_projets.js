@@ -141,6 +141,37 @@ export const projets_pages = [
         "</section>\n",
         "slug": "pokedex",
         "metaDescription": ""
+    },
+    {
+        "title": "Invoice",
+        "author": "Guerric COCHELIN",
+        "date": "2025-04-21",
+        "tag": ["TypeScript"],
+        "content": "<h2>Développement d'un site de facturation</h2>\n" +
+        "<div class='section-line'></div>\n" +
+        "<section>\n" +
+        "<h3>Contexte</h3>\n" +
+        "<p>Lors d'un projet de spécialité d'une semaine, nous devions créer un site permettant de gérer des factures à partir d'un calendrier</p>\n" +
+        "</section>\n" +
+        "<div class='section-line'></div>\n" +
+        "<section>\n" +
+        "<h3>Ce que j'ai appris</h3>\n" +
+        "<div>\n" +
+        "<p>C'était la première fois que j'utilisais Next.js, j'ai donc suivi quelques vidéos et consulté beaucoup de documentation. J'ai appris comment Next.js est structuré.</p>\n" +
+        "<p>J'ai aussi découvert la gestion des sessions utilisateur avec NextAuth.js</p>\n" +
+        "</div>\n" +
+        "</section>\n" +
+        "<div class='section-line'></div>\n" +
+        "<section>\n" +
+        "<h3>Résultat</h3>\n" +
+        "<p>En lançant la vidéo, vous pouvez voir le site opérationnel en action : les utilisateurs peuvent s'inscrire ou se connecter à la plateforme, enregistrer leur entreprise, puis créer leurs factures.</p>\n" +
+        "    <video id='result-video' controls>\n" +
+        "        <source src='../mp4/invoice.mp4' type='video/mp4'>\n" +
+        "        Votre navigateur ne prend pas en charge la balise vidéo.\n" +
+        "    </video>\n" +
+        "</section>\n",
+        "slug": "invoice",
+        "metaDescription": ""
     }
     
 ];

@@ -34,6 +34,15 @@ const projets = [
         "title": "Pokedex",
         "title2": "Decouverte API",
         "tags": ["HTML", "JS"],
+    },
+    {
+        "description": "Création de facture",
+        "url": "projets/invoice",
+        "src": "img/invoice.png",
+        "alt": "Invoice",
+        "title": "Invoice",
+        "title2": "Decouverte Next.js",
+        "tags": ["TypeScript"],
     }
 ]
 
@@ -148,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         tag_cards.style.backgroundColor = "#f0e10e";
                         tag_cards.style.color = "black";
                         break;
-                    case "Maquettes":
+                    case "TypeScript":
                         tag_cards.style.backgroundColor = "#ff5733";
                         tag_cards.style.color = "white";
                         break;
