@@ -15,7 +15,7 @@ const projets = [
         "alt": "Summonersdle",
         "title": "Summonersdle",
         "title2": "Projet personnel",
-        "tags": ["HTML", "JS"],
+        "tags": ["JS"],
     },
     {
         "description": "Formulaire d'inscription php",
@@ -33,7 +33,7 @@ const projets = [
         "alt": "Pokedex",
         "title": "Pokedex",
         "title2": "Decouverte API",
-        "tags": ["HTML", "JS"],
+        "tags": ["JS"],
     },
     {
         "description": "Création de facture",
@@ -63,7 +63,7 @@ const projets_actu = [
         "alt": "Summonersdle",
         "title": "Summonersdle",
         "title2": "Projet personnel",
-        "tags": ["HTML", "JS"],
+        "tags": ["JS"],
     },
     {
         "description": "Formulaire d'inscription php",
