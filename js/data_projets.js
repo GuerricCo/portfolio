@@ -146,7 +146,7 @@ export const projets_pages = [
         "title": "Invoice",
         "author": "Guerric COCHELIN",
         "date": "2025-04-21",
-        "tag": ["TypeScript"],
+        "tag": ["TS"],
         "content": "<h2>Développement d'un site de facturation</h2>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +

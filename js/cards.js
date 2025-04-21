@@ -42,7 +42,7 @@ const projets = [
         "alt": "Invoice",
         "title": "Invoice",
         "title2": "Decouverte Next.js",
-        "tags": ["TypeScript"],
+        "tags": ["TS"],
     }
 ]
 
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         tag_cards.style.backgroundColor = "#f0e10e";
                         tag_cards.style.color = "black";
                         break;
-                    case "TypeScript":
+                    case "TS":
                         tag_cards.style.backgroundColor = "#ff5733";
                         tag_cards.style.color = "white";
                         break;
