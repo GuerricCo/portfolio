@@ -4,14 +4,6 @@ a {
 }
 .greencolor{
     color: var(--color-green);
-    text-shadow: 
-        0 0 5px var(--color-green),
-        0 0 10px var(--color-green),
-        0 0 20px var(--color-green),
-        0 0 30px #000000, 
-        0 0 40px #000000, 
-        0 0 50px #000000,
-        0 0 75px #000000;
 }
 
 .projects {
@@ -204,7 +196,7 @@ footer h3 {
 
 /****header****/
 :root {
-    --color-green: #16520f;
+    --color-green: #5EE9B5;
 }
 
 h1 {
