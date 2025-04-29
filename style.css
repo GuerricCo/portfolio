@@ -363,7 +363,30 @@ section#home {
 .letter-by-letter span:nth-child(14) {
     animation-delay: 1.3s;
 }
-
+.letter-by-letter span:nth-child(15) {
+    animation-delay: 1.4s;
+}
+.letter-by-letter span:nth-child(16) {
+    animation-delay: 1.5s;
+}
+.letter-by-letter span:nth-child(17) {
+    animation-delay: 1.6s;
+}
+.letter-by-letter span:nth-child(18) {
+    animation-delay: 1.7s;
+}
+.letter-by-letter span:nth-child(19) {
+    animation-delay: 1.8s;
+}
+.letter-by-letter span:nth-child(20) {
+    animation-delay: 1.9s;
+}
+.letter-by-letter span:nth-child(21) {
+    animation-delay: 2s;
+}
+.letter-by-letter span:nth-child(22) {
+    animation-delay: 2.1s;
+}
 
 
 /** section formation**/
