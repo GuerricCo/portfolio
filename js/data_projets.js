@@ -146,7 +146,7 @@ export const projets_pages = [
         "title": "Invoice",
         "author": "Guerric COCHELIN",
         "date": "2025-04-21",
-        "tag": ["TS"],
+        "tag": ["Next-Js"],
         "content": "<h2>Développement d'un site de facturation</h2>\n" +
         "<div class='section-line'></div>\n" +
         "<section>\n" +
@@ -171,6 +171,38 @@ export const projets_pages = [
         "    </video>\n" +
         "</section>\n",
         "slug": "invoice",
+        "metaDescription": ""
+    },
+    {
+        "title": "Carthage",
+        "author": "Guerric COCHELIN",
+        "date": "2025-04-30",
+        "tag": ["React"],
+        "content": 
+        "<h2>Création d’un site web pour auteur</h2>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Contexte</h3>\n" +
+"<p>Dans le cadre d’un projet client, j’ai réalisé un site vitrine pour un écrivain.</p>\n" +
+"<p>Après un échange sur ses attentes, j’ai conçu des maquettes puis développé le site avec React.</p>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Ce que j'ai appris</h3>\n" +
+"<div>\n" +
+"<p>Ce projet m’a permis de découvrir et de comprendre les bases de React : création et utilisation de composants, gestion des props et du state, ainsi que la structuration d’une application en composants réutilisables.</p>\n" +
+"</div>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Résultat</h3>\n" +
+"<p>En activant le contenu, vous pouvez voir le rendu final. Le site est aujourd'hui en ligne.</p>\n" +
+        "<div class='iframe-container'>\n" +
+        "    <iframe id='result-iframe' src='https://www.leslarmesdumolosse.com/' title='Site de l'écrivain'></iframe>\n" +
+        "    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
+        "</div>\n" +
+        "</section>\n",
+        "slug": "carthage",
         "metaDescription": ""
     }
     

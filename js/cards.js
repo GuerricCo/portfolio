@@ -42,7 +42,16 @@ const projets = [
         "alt": "Invoice",
         "title": "Invoice",
         "title2": "Decouverte Next.js",
-        "tags": ["TS"],
+        "tags": ["Next-Js"],
+    },
+    {
+        "description": "Site Carthage",
+        "url": "projets/carthage",
+        "src": "img/carthage.png",
+        "alt": "Carthage",
+        "title": "Carthage",
+        "title2": "Site client",
+        "tags": ["React"],
     }
 ]
 
@@ -157,11 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         tag_cards.style.backgroundColor = "#f0e10e";
                         tag_cards.style.color = "black";
                         break;
-                    case "TS":
+                    case "Next-Js":
                         tag_cards.style.backgroundColor = "#ff5733";
                         tag_cards.style.color = "white";
                         break;
-                    case "Design":
+                    case "React":
                         tag_cards.style.backgroundColor = "#3371ff";
                         tag_cards.style.color = "white";
                         break;
