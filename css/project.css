@@ -1,6 +1,15 @@
 :root {
-    --color-green: #16520f;
-}
+    --color-green: #5EE9B5;
+    }
+    
+    .italic{
+        font-style: italic;
+        font-weight: 400;
+        color: white;
+    }
+    .greencolor{
+        color: var(--color-green);
+    }
 
 h1 {
     font-size: 60px;
