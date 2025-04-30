@@ -282,7 +282,7 @@ h2 {
 
 body {
     margin: 0;
-    font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+    font-family: 'Poppins', 'Roboto', sans-serif;
     background-color: black;
     color: white;
 }
@@ -538,7 +538,7 @@ button{
         height: 30px;
     }
     h2, h3, p {
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
 }
 .form-container{
