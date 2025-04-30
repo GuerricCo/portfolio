@@ -52,14 +52,6 @@ header a.logo {
 
 .greencolor {
     color: var(--color-green);
-    text-shadow: 
-        0 0 5px var(--color-green),
-        0 0 10px var(--color-green),
-        0 0 20px var(--color-green),
-        0 0 30px #000000, 
-        0 0 40px #000000, 
-        0 0 50px #000000,
-        0 0 75px #000000;
 }
 
 /****footer***/
@@ -98,7 +90,6 @@ footer h3 {
 }
 
 .neon-icon:hover {
-    filter: drop-shadow(0 0 5px var(--color-green)) drop-shadow(0 0 10px var(--color-green)) drop-shadow(0 0 30px var(--color-green));
     transform: scale(1.1);
 }
 

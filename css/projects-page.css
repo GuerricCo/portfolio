@@ -1,9 +1,20 @@
+:root {
+    --color-green: #5EE9B5;
+    }
+    
+    .italic{
+        font-style: italic;
+        font-weight: 400;
+        color: white;
+    }
+    .greencolor{
+        color: var(--color-green);
+    }
+
+
 a {
     text-decoration: none;
     color: white;
-}
-.greencolor{
-    color: var(--color-green);
 }
 
 .projects {
@@ -189,7 +200,6 @@ footer h3 {
 }
 
 .neon-icon:hover {
-    filter: drop-shadow(0 0 5px var(--color-green)) drop-shadow(0 0 10px var(--color-green)) drop-shadow(0 0 30px var(--color-green));
     transform: scale(1.1);
 }
 
@@ -260,14 +270,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--color-green);
-    text-shadow: 
-        0 0 5px var(--color-green),
-        0 0 10px var(--color-green),
-        0 0 20px var(--color-green),
-        0 0 30px var(--color-green), 
-        0 0 40px var(--color-green), 
-        0 0 50px #000000,
-        0 0 75px #000000;
 }
 
 
