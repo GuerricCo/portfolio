@@ -250,6 +250,10 @@ pre {
     .retour{
         top: 20px;
     }
+    header{
+        position: relative;
+        justify-content: space-around;
+    }
 }
 
 @media screen and (max-width: 768px) {}
