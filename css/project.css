@@ -29,29 +29,42 @@ body {
     color: white;
 }
 
-header {
-    padding: 20px 100px 0 60px
-}
-header .tags {
-    display: flex;
-    gap: 15px;
-}
-header .tags a {
-    text-decoration: none;}
-    
-header .tag a:hover{
+
+
+.greencolor {
     color: var(--color-green);
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+header {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
 
 header a.logo {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-}
-
-.greencolor {
-    color: var(--color-green);
 }
 
 /****footer***/
