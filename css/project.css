@@ -24,7 +24,7 @@ h2 {
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', 'Roboto', sans-serif;
     background-color: black;
     color: white;
 }
@@ -241,6 +241,12 @@ pre {
 
 
 @media screen and (max-width: 1150px) {
+    h1{
+        font-size: 2rem;
+    }
+    h2, h3, p {
+        font-size: 1rem;
+    }
     pre code {
         padding:0px;
     }
@@ -256,4 +262,8 @@ pre {
     }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 1.8rem;
+    }
+}

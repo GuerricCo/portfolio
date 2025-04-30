@@ -282,7 +282,7 @@ h2 {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', 'Roboto', Arial, sans-serif;
     background-color: black;
     color: white;
 }
@@ -348,6 +348,9 @@ button{
     color: white;
 }
 @media screen and (max-width: 1150px) {
+    h1{
+        font-size: 2rem;
+    }
     header nav{
         display: none;
     }
@@ -534,12 +537,19 @@ button{
         width: 30px;
         height: 30px;
     }
+    h2, h3, p {
+        font-size: 1rem;
+    }
 }
 .form-container{
     margin: 0;
 }
 
+
 @media screen and (max-width: 768px) {
+    h1{
+        font-size: 1.8rem;
+    }
     .content h2 {
         font-size: 0.8em;
     }
