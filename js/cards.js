@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             content.className = "content";
             infos_cards.appendChild(content);
 
-            let title_cards = document.createElement("h2");
+            let title_cards = document.createElement("h3");
             title_cards.textContent = project.title;
             content.appendChild(title_cards);
 
