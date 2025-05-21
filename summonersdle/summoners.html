@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+    <h1>Summoners Wars</h1>
+        <div class="search-box">
+            <input type="text" id="tagInput" placeholder="Tapez un nom de monstre...">
+            <ul id="suggestions" class="hidden"></ul>
+        </div>
+        <input type="button" id="btnValidate" value="valider">
+        <input type="button" id="btnStart" value="commencer">
+    </div>
+
+    <div id="monstreInfoContainer">
+            <div class="monstreInfoCell">Nom</div>
+            <div class="monstreInfoCell">Famille</div>
+            <div class="monstreInfoCell">Élément</div>
+            <div class="monstreInfoCell">Type</div>
+            <div class="monstreInfoCell">Effet de renforcement</div>
+            <div class="monstreInfoCell">Effet nocif</div>
+            <div class="monstreInfoCell">Lead</div>
+        </div>
+        <div id="monstreInfoBody">
+            <!-- Les nouvelles lignes seront ajoutées ici -->
+        </div>
+    </div>
+
+    
+
+    <script src="scriptPrincipal.js"></script>
+</body>
+
+</html>

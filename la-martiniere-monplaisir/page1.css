@@ -1,0 +1,909 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h1 {
+    padding-top: 40px;
+    text-align: center;
+    text-shadow: 3px 3px 6px rgb(0, 0, 0);
+    font-size: 90px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 100%;
+    font-family: 'Literata', serif;
+}
+
+a {
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+
+body {
+    background-color: white;
+    margin: 0;
+}
+
+#Logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+
+#connexion {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Literata', serif;
+    gap: 5px;
+}
+
+.search-container {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 0;
+}
+
+.search-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+#region img {
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+/****main-header*****/
+
+#menu-image img {
+    width: 230px;
+    height: 176px;
+    border-radius: 20px;
+    object-fit: cover;
+    position: absolute;
+    z-index: 999;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hero-menu a {
+    font-size: 30px;
+    font-family: 'Mirza', serif;
+}
+
+#hero-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-element a {
+    padding: 30px;
+    color: white;
+}
+
+#main-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/1.png);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 500px;
+}
+
+#main-header p {
+    text-align: center;
+    margin: 40px 300px;
+    font-size: 18px;
+}
+
+#main-header button {
+    text-align: center;
+    margin: 40px 120px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.button-inscription {
+    background-color: #226894;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:active {
+    transform: translateY(2px);
+}
+
+
+
+
+/**********************Changement d'image auto***************/
+#main-header {
+    background-size: cover;
+    color: white;
+    text-align: center;
+    animation: changeBackground 20s infinite;
+    /* Changer l'image toutes les 4 secondes (4s * 3 images = 12s) */
+}
+
+@keyframes changeBackground {
+
+    0%,
+    100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img1/lamartiniere-1.webp);
+    }
+
+    33.33% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img1/lamartiniere-2.webp);
+    }
+
+    66.66% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img1/lamartiniere.webp);
+    }
+}
+
+
+
+
+
+/*********Infos**************/
+
+
+main section#infos ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+
+}
+
+main section#infos ul li {
+
+    padding: 40px 10px 40px 10px;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+
+}
+
+main section#infos p,
+main section#infos img {
+    margin: 0 auto;
+}
+
+main section#infos h3 {
+    margin-top: 0;
+    padding-bottom: 5px;
+}
+
+main section#infos img {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: -3px 3px 3px rgb(3, 3, 3);
+    width: 90%;
+}
+
+
+.separator {
+    border: 1px solid #000;
+    width: 50px;
+    margin: 0 auto;
+}
+
+
+main section#infos p {
+    padding: 15px 0 15px 0;
+    margin: 0;
+    height: 20%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button-savoir {
+    padding: 7px 13px;
+    background-color: #255F90;
+    font-size: 15px;
+}
+
+
+
+
+
+/*****************dates*****************/
+main section#dates h3 {
+    margin: 0;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+
+
+.purple-background {
+    background-color: #555457;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-square {
+    background-color: white;
+    padding: 20px 220px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.center-square p {
+    margin: 0;
+    font-size: 25px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+
+
+
+/************************maps**************************/
+.rectangle-container {
+    width: 600px;
+    display: flex;
+    padding-top: 30px;
+    margin: 0;
+}
+
+.rounded-rectangle {
+    background-color: #470094;
+    color: white;
+    width: 500px;
+    padding: 10px 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+
+#map {
+    width: 600px;
+    height: 450px;
+}
+
+iframe {
+    width: 600px;
+    height: 450px;
+
+}
+
+#carte {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+}
+
+#coordonnées {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+main section#maps .coordonnées img {
+    width: 45px;
+    height: 45px;
+    background-position: center;
+    background-size: cover;
+    margin-right: 20px;
+}
+
+ul.coordonnées li {
+    margin: 0;
+}
+
+ul.coordonnées {
+    list-style: none;
+    padding: 0;
+}
+
+ul.coordonnées li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 500px;
+    margin-left: 200px;
+}
+
+ul.coordonnées li img {
+    margin-right: 10px;
+}
+
+
+
+main section#maps ul li h4 {
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+
+
+
+/***************Intendance************************/
+.rectangle-container2 {
+
+    display: flex;
+    padding-top: 10px;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+.rounded-rectangle2 {
+    background-color: #470094;
+    color: white;
+    width: 500px;
+    padding: 10px 10px;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+main section#intendance li {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    width: 700px;
+}
+
+main section#intendance li h4 {
+    text-align: left;
+    padding-left: 30px;
+}
+
+main section#intendance ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+main section#intendance img {
+    width: 90%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+main section#intendance li p {
+    padding: 20px 60px 20px 60px;
+    margin: 0;
+}
+
+
+/***********logo************/
+#logo img {
+    height: 285px;
+    width: 199px;
+}
+
+#logo {
+    margin: 100px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*************footer**********/
+footer {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    background-color: #470094;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer #titre-footer {
+    padding-left: 50px;
+}
+
+footer #logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 20px;
+}
+
+footer h4,
+footer h5 {
+    font-size: 25px;
+    font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+footer h4 {
+    padding-bottom: 30px;
+}
+
+footer h5 {
+    text-decoration: underline;
+}
+
+footer #logo-footer img {
+    width: 300px;
+    height: 50px;
+}
+
+footer #reseaux img {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+footer img {
+    object-fit: cover;
+    padding: 5px;
+}
+
+.header2 {
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+
+
+    #menu-image img {
+        display: none;
+    }
+
+    #region img {
+        width: 80%;
+        margin: 0;
+    }
+
+    .search-container {
+        width: 10%;
+        height: 10%;
+    }
+
+    #connexion {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    #hero-menu {
+        display: block;
+    }
+
+
+
+    h1 {
+        font-size: 30px;
+        padding-left: 5%;
+        text-align: center;
+        padding: 0;
+    }
+
+    #main-header p {
+        text-align: center;
+        margin: 0;
+    }
+
+    a {
+        font-size: 15;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    #connexion {
+        padding-right: 30px;
+        padding-top: 20px;
+
+    }
+
+    #logo img {
+        width: 50%;
+        height: 50%;
+    }
+
+
+    .search-container {
+        padding: 0;
+        width: 20%;
+        height: 30%;
+    }
+
+    footer {
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    footer #titre-footer {
+        padding: 0;
+    }
+
+    footer #logo-footer {
+        display: block;
+    }
+
+    main section#infos ul {
+        flex-direction: column;
+    }
+
+
+    main section#infos ul li {
+        width: auto;
+        padding-bottom: 0;
+    }
+
+    .center-square {
+        padding: 0;
+    }
+
+    .rounded-rectangle {
+        width: auto;
+    }
+
+    #carte {
+        flex-direction: column;
+        padding: 0;
+        padding-top: 30px;
+    }
+
+    #map {
+        margin: 0;
+        width: 80px;
+        height: auto;
+    }
+
+    ul.coordonnées li {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    ul.coordonnées {
+        margin: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .rounded-rectangle2 {
+        width: auto;
+    }
+
+    main section#intendance ul {
+        flex-direction: column;
+
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+
+    }
+
+    main section#intendance li {
+        width: auto;
+        margin-bottom: 40px;
+    }
+
+    
+
+    #carte {
+        width: auto;
+    }
+
+    .menu-element a {
+        padding: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .menu-element {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rectangle-container {
+        width: auto;
+    }
+
+}
+
+
+
+
+
+
+/* Base responsive styles */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive layout */
+#Logo {
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+
+.search-container {
+    margin: 10px 0;
+}
+
+/* Hero section adjustments */
+#main-header {
+    height: auto;
+    padding: 20px;
+}
+
+#main-header p {
+    margin: 20px;
+    font-size: 1rem;
+}
+
+/* Info cards */
+main section#infos ul {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+main section#infos ul li {
+    flex: 1 1 calc(100% - 20px); /* Full width on small screens */
+    max-width: 300px; /* Limit the width for larger screens */
+    margin: 10px auto;
+}
+
+/* Maps and addresses */
+#map {
+    width: 100%;
+    height: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/* Footer adjustments */
+footer {
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+    p {
+        font-size: 90%; /* Réduit légèrement la taille du texte */
+    }
+
+    main section#infos img,
+    main section#intendance img {
+        width: 95%; /* Ajuste légèrement la largeur */
+    }
+
+    main section#intendance img {
+        height: 300px; /* Diminue la hauteur pour s'adapter */
+    }
+    #infos {
+        gap: 15px; /* Réduit l'espacement entre les éléments */
+        padding: 15px;
+    }
+
+    #infos img {
+        max-width: 90%; /* Réduit légèrement la largeur des images */
+    }
+
+    #infos p {
+        font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+    .internat {
+        gap: 15px; /* Réduit l'espace entre les images */
+    }
+
+    .internat img {
+        max-width: 90%; /* Images légèrement réduites */
+    }
+
+    .internat p {
+        font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+    #hero-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #hero-menu a {
+        padding: 10px;
+    }
+
+    .menu-element a {
+        font-size: 20px;
+    }
+
+    .center-square p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 85%; /* Réduit davantage la taille du texte */
+    }
+
+    main section#infos img,
+    main section#intendance img {
+        width: 100%; /* Les images prennent toute la largeur disponible */
+    }
+
+    main section#intendance img {
+        height: auto; /* Ajuste la hauteur en fonction de la largeur */
+    }
+    #infos {
+        flex-direction: column; /* Empile les éléments en colonne */
+        gap: 10px;
+    }
+
+    #infos img {
+        max-width: 100%; /* Prend toute la largeur */
+    }
+
+    #infos p {
+        font-size: 0.85rem; /* Réduit davantage la taille du texte */
+    }
+    .internat {
+        flex-direction: column; /* Images empilées en colonne */
+        gap: 10px;
+    }
+
+    .internat img {
+        max-width: 100%; /* Prend toute la largeur */
+    }
+
+    .internat p {
+        font-size: 0.8rem; /* Plus petite taille pour le texte */
+    }
+    #hero-menu {
+        flex-direction: column;
+    }
+
+    .menu-element a {
+        font-size: 18px;
+    }
+
+    main section#infos ul li {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #Logo{ justify-content: center;}
+    p {
+        font-size: 80%; /* Taille de texte plus petite pour les petits écrans */
+    }
+
+    main section#infos img,
+    main section#intendance img {
+        width: 100%; /* Toujours 100% de largeur */
+        height: auto; /* Maintient les proportions de l'image */
+    }
+    #infos {
+        padding: 10px;
+    }
+
+    #infos img {
+        max-width: 100%; /* Toujours ajusté au conteneur */
+    }
+
+    #infos p {
+        font-size: 0.8rem; /* Texte plus petit */
+    }
+    .internat {
+        padding: 10px;
+    }
+
+    .internat img {
+        max-width: 100%; /* Toujours ajusté au conteneur */
+    }
+
+    .internat p {
+        font-size: 0.75rem; /* Encore plus petit pour les petits écrans */
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3, h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 8px 20px;
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .center-square {
+        padding: 10px 50px;
+    }
+}

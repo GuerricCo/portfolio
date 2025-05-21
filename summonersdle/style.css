@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.search-box {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#btnStart{
+display: none;
+}
+
+#monstreInfoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    z-index: 10;
+}
+
+#suggestions .suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+#suggestions .suggestion-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#suggestions .suggestion-item:hover {
+    background: #ffcc00;
+}
+
+
+
+.monstreInfoHeader, .monstreInfoRow {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.monstreInfoCell {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.monstreInfoRow .monstreInfoCell {
+    font-weight: bold;
+}
+
+.monstreInfoCell.background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.monstreInfoCell .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.monstreInfoCell:hover .overlay {
+    opacity: 1;
+}
+
+
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* ✅ Pas de réduction de taille — juste le défilement horizontal */
+    #monstreInfoContainer {
+        overflow-x: auto;
+        justify-content: flex-start
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #monstreInfoContainer {
+        overflow-x: auto;
+        justify-content: flex-start
+    }
+}

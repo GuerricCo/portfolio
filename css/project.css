@@ -1,0 +1,232 @@
+:root {
+    --color-green: #5EE9B5;
+    }
+    
+    .italic{
+        font-style: italic;
+        font-weight: 400;
+        color: white;
+    }
+    .greencolor{
+        color: var(--color-green);
+    }
+
+h1 {
+    font-size: 64px;
+    margin: 20px 0;
+    text-align: center; /* Centrage du h1 */
+}
+
+h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.greencolor {
+    color: var(--color-green);
+    position: relative;
+    top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+header {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+header a.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/****footer***/
+footer {
+    padding-top: 50px;
+    color: white;
+    padding-bottom: 5%;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.line {
+    margin-top: 50px;
+    height: 2px;
+    background-color: var(--color-green);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grandcontact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.neon-icon {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.neon-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Style du conteneur iframe */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--color-green);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Style de l'iframe (initialement inactif) */
+.iframe-container iframe {
+    pointer-events: none;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style de l'iframe quand activée */
+.iframe-container.active iframe {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/* Style du bouton */
+.iframe-button {
+    position: absolute;
+    background-color: var(--color-green);
+    color: white;
+    border: 2px solid transparent;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Effet de hover sur le bouton */
+.iframe-button:hover {
+    background-color: white;
+    color: var(--color-green);
+    border: 2px solid var(--color-green);
+}
+
+.iframe-container.active .iframe-button {
+    display: none;
+}
+
+/* Ligne de séparation */
+.section-line {
+    margin: 40px auto;
+    height: 2px;
+    background-color: var(--color-green);
+    width: 90%;
+}
+
+/* Style de l'article qui contient le contenu global */
+article {
+    width: 80%; /* Largeur de l'article */
+    margin: 0 auto; /* Centrer l'article */
+}
+
+.retour {
+    color: var(--color-green);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    top: 40px;
+    left: 10px;
+}
+
+/* Style pour la section "Ce que j'ai appris" */
+.appris {
+    margin: 20px 0;
+}
+
+/* Flexbox pour aligner le texte et le code sur la même ligne */
+.text-and-code {
+    display: flex;
+    gap: 20px; /* Espace entre le texte et le code */
+}
+
+/* Style du code avec fond gris et padding */
+pre code {
+    padding: 250px;
+}
+pre {
+    FONT-WEIGHT: 300;
+    padding: 10px;
+    background-color: grey;
+    border-radius: 30px;
+}
+
+#result-video{
+    width: 100%;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 1150px) {
+    h1{
+        font-size: 2rem;
+    }
+    h2, h3, p {
+        font-size: 0.5rem;
+    }
+    pre code {
+        padding:0px;
+    }
+    .text-and-code {
+        flex-direction: column;
+    }
+    .retour{
+        top: 20px;
+    }
+    header{
+        position: relative;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 1.8rem;
+    }
+}
