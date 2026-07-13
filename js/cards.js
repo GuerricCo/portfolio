@@ -52,6 +52,24 @@ const projets = [
         "title": "Carthage",
         "title2": "Site client",
         "tags": ["React"],
+    },
+    {
+        "description": "Plateforme communautaire pour les créatifs de l'audiovisuel",
+        "url": "projets/lency",
+        "src": "img/lency.png",
+        "alt": "Lency",
+        "title": "Lency",
+        "title2": "Projet d'école - 6 mois",
+        "tags": ["Next-Js"],
+    },
+    {
+        "description": "Gestion de bibliothèque : livres et emprunts",
+        "url": "projets/biblioap",
+        "src": "img/biblioap.png",
+        "alt": "BiblioAP",
+        "title": "BiblioAP",
+        "title2": "Projet personnel",
+        "tags": ["Java"],
     }
 ]
 
@@ -176,6 +194,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         break;
                     case "WordPress":
                         tag_cards.style.backgroundColor = "#33ffaf";
+                        tag_cards.style.color = "white";
+                        break;
+                    case "Java":
+                        tag_cards.style.backgroundColor = "#b07219";
                         tag_cards.style.color = "white";
                         break;
                 }

@@ -315,6 +315,11 @@ button{
     background-color: #33ffaf;
     color: white;
 }
+
+.Java {
+    background-color: #b07219;
+    color: white;
+}
 @media screen and (max-width: 1150px) {
     h1{
         font-size: 2rem;

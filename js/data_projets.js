@@ -204,7 +204,99 @@ export const projets_pages = [
         "</section>\n",
         "slug": "carthage",
         "metaDescription": ""
+    },
+    {
+        "title": "Lency",
+        "author": "Guerric COCHELIN",
+        "date": "2026-07-02",
+        "tag": ["Next-Js"],
+        "content":
+"<h2>Lency, la communauté des créatifs de l'audiovisuel</h2>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Contexte</h3>\n" +
+"<p>Lency est un projet d'école mené sur 6 mois avec un groupe de 6 personnes (2 créatifs, 2 développeurs, 2 marketing). C'est une plateforme communautaire qui met en relation les créatifs de l'audiovisuel (réalisateurs, monteurs, cadreurs, comédiens, techniciens…) pour les aider à monter des projets ensemble.</p>\n" +
+"<p>En tant que développeur, j'ai participé à la conception et à la réalisation de la plateforme : marketplace de projets avec recherche géolocalisée, messagerie en temps réel, système de notifications, espace communautaire (posts, commentaires, votes) et espace d'administration.</p>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Ce que j'ai appris</h3>\n" +
+"<div class='text-and-code'>\n" +
+"<p>Travailler à 2 développeurs sur une base de code partagée pendant 6 mois m'a poussé à respecter une architecture stricte pour rester cohérent. Chaque fonctionnalité suit un flux unidirectionnel : le composant valide les données avec un schéma Zod, un fetch wrapper appelle un Route Handler Next.js, qui délègue la logique métier à un service, qui lui-même ne fait appel au Repository que pour l'accès aux données.</p>\n" +
+"<pre><code class='language-js'>\n" +
+"Composant (React Hook Form)\n" +
+"  -> Schema Zod (validation front)\n" +
+"  -> Fetch wrapper (front/lib/api)\n" +
+"    -> Route Handler (validation Zod serveur)\n" +
+"      -> Service (logique métier + auth)\n" +
+"        -> Repository (Prisma / PostgreSQL)\n" +
+"</code></pre>\n" +
+"<p>J'ai aussi découvert Prisma avec une base PostgreSQL hébergée sur Neon, l'authentification avec better-auth (email/mot de passe, OAuth Google, OTP par email), la messagerie temps réel avec Ably, et l'intégration d'une carte interactive (Leaflet) pour géolocaliser les projets et les talents.</p>\n" +
+"</div>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Résultat</h3>\n" +
+"<p>En activant le contenu, vous pouvez voir le site en ligne. Lency est aujourd'hui accessible sur <a href='https://lency.net/' target='_blank'>lency.net</a>.</p>\n" +
+"<div class='iframe-container'>\n" +
+"    <iframe id='result-iframe' src='https://lency.net/' title='Lency'></iframe>\n" +
+"    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
+"</div>\n" +
+"</section>\n",
+        "slug": "lency",
+        "metaDescription": ""
+    },
+    {
+        "title": "BiblioAP",
+        "author": "Guerric COCHELIN",
+        "date": "2026-07-10",
+        "tag": ["Java"],
+        "content":
+"<h2>BiblioAP, gestion de bibliothèque</h2>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Contexte</h3>\n" +
+"<p>BiblioAP est un projet personnel qui permet de gérer une bibliothèque : le catalogue de livres (avec leurs auteurs, catégories et le nombre d'exemplaires disponibles), les membres, ainsi que les emprunts avec leur statut (en cours, rendu, en retard). L'application gère aussi les réservations et les avis laissés sur les livres.</p>\n" +
+"<p>Le projet est généré avec JHipster, qui combine un front en Angular et un back en Spring Boot (Java), avec une base de données PostgreSQL.</p>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Ce que j'ai appris</h3>\n" +
+"<div class='text-and-code'>\n" +
+"<p>Ce projet m'a permis de découvrir JHipster et sa manière de modéliser un modèle de données via un langage dédié (JDL), à partir duquel les entités, leurs relations et l'API REST associée sont générées automatiquement des deux côtés (Angular et Spring Boot).</p>\n" +
+"<pre><code class='language-js'>\n" +
+"entity Book {\n" +
+"  title String required\n" +
+"  isbn String unique required\n" +
+"  availableCopies Integer required min(0)\n" +
+"}\n" +
+"\n" +
+"entity Loan {\n" +
+"  borrowDate LocalDate required\n" +
+"  dueDate LocalDate required\n" +
+"  status LoanStatus required\n" +
+"}\n" +
+"\n" +
+"relationship ManyToOne {\n" +
+"  Loan{book(title)} to Book\n" +
+"  Loan{member(email)} to Member\n" +
+"}\n" +
+"</code></pre>\n" +
+"<p>J'ai ainsi pu approfondir la gestion des relations entre entités (ManyToOne, ManyToMany), la pagination et le filtrage côté API, ainsi que la communication entre un front Angular et un back Spring Boot exposé en REST.</p>\n" +
+"</div>\n" +
+"</section>\n" +
+"<div class='section-line'></div>\n" +
+"<section>\n" +
+"<h3>Résultat</h3>\n" +
+"<p>En activant le contenu, vous pouvez voir le site en ligne. BiblioAP est aujourd'hui accessible sur <a href='https://biblioap.org/' target='_blank'>biblioap.org</a>.</p>\n" +
+"<div class='iframe-container'>\n" +
+"    <iframe id='result-iframe' src='https://biblioap.org/' title='BiblioAP'></iframe>\n" +
+"    <button id='activate-iframe' class='iframe-button'>Activer le contenu</button>\n" +
+"</div>\n" +
+"</section>\n",
+        "slug": "biblioap",
+        "metaDescription": ""
     }
-    
+
 ];
 
